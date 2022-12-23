@@ -1,70 +1,150 @@
-# Getting Started with Create React App
+# React Mock Code Challenge: Plantsy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo
 
-## Available Scripts
+Use this gif as an example of how the app should work.
 
-In the project directory, you can run:
+![Demo GIF](https://curriculum-content.s3.amazonaws.com/phase-2/react-hooks-mock-code-challenge-plantshop/plantsy_demo.gif)
 
-### `npm start`
+## Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Welcome to Plantsy! You've been tasked with building out some features for the
+admin side of a plant store. The designers have put together the components and
+CSS. Now it's up to you to bring the features to life by adding stateful logic
+as well as persisting data to the backend via our API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Your job will be to make our app work according to the user stories you will
+find the [Core Deliverables](#Core-Deliverables) section.
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Run `npm install` in your terminal.
+2. Run `npm run server`. This will run your backend on port `6001`.
+3. In a new terminal, run `npm start`.
 
-### `npm run build`
+Make sure to open [http://localhost:6001/plants](http://localhost:6001/plants)
+in the browser to verify that your backend is working before you proceed!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Endpoints
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The base URL for your backend is: `http://localhost:6001`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Core Deliverables
 
-### `npm run eject`
+As a user:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. When the app starts, I can see all plants.
+2. I can add a new plant to the page by submitting the form.
+3. I can mark a plant as "sold out".
+4. I can search for plants by their name and see a filtered list of plants.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Endpoints for Core Deliverables
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### GET /plants
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Example Response:
 
-## Learn More
+```json
+[
+  {
+    "id": 1,
+    "name": "Aloe",
+    "image": "./images/aloe.jpg",
+    "price": 15.99
+  },
+  {
+    "id": 2,
+    "name": "ZZ Plant",
+    "image": "./images/zz-plant.jpg",
+    "price": 25.98
+  }
+]
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### POST `/plants`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Required Headers:
 
-### Code Splitting
+```js
+{
+  "Content-Type": "application/json"
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Request Object:
 
-### Analyzing the Bundle Size
+```json
+{
+  "name": "string",
+  "image": "string",
+  "price": number
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Example Response:
 
-### Making a Progressive Web App
+```json
+{
+  "id": 1,
+  "name": "Aloe",
+  "image": "./images/aloe.jpg",
+  "price": 15.99
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Advanced Deliverables
 
-### Advanced Configuration
+These deliverables are not required to pass the code challenge, but if you have
+the extra time, or even after the code challenge, they are a great way to
+stretch your skills.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+You'll have to add additional elements for these features. Feel free to style
+them however you see fit!
 
-### Deployment
+> Note: If you are going to attempt these advanced deliverables, please be sure
+> to have a working commit with all the Core Deliverables first!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+As a user:
 
-### `npm run build` fails to minify
+1. I can update the price of a plant and still see the updated price after
+   refreshing the page.
+2. I can delete a plant and it is still gone when I refresh the page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Endpoints for Advanced Deliverables
+
+#### PATCH /plants/:id
+
+Required Headers:
+
+```js
+{
+  "Content-Type": "application/json"
+}
+```
+
+Request Object:
+
+```json
+{
+  "price": number
+}
+```
+
+Example Response:
+
+```json
+{
+  "id": 1,
+  "name": "Aloe",
+  "image": "./images/aloe.jpg",
+  "price": 16.99
+}
+```
+
+#### DELETE /plants/:id
+
+Example Response:
+
+```json
+{}
+```

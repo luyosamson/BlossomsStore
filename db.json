@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": 4,
+      "name": "Pothos",
+      "image": "./images/pothos.jpg",
+      "price": 6000
+    },
+    {
+      "id": 5,
+      "name": "Jade",
+      "image": "./images/jade.jpg",
+      "price": 10.37
+    },
+    {
+      "id": 6,
+      "name": "Monstera Deliciosa",
+      "image": "./images/monstera.jpg",
+      "price": 25.99
+    },
+    {
+      "id": 7,
+      "name": "Fiddle Leaf Fig",
+      "image": "./images/fiddle-leaf-fig.jpg",
+      "price": 55
+    },
+    {
+      "name": "Book",
+      "image": "./images/zz-plant.jpg",
+      "price": "340",
+      "id": 8
+    },
+    {
+      "name": "Luyo Samson",
+      "image": "./images/zz-plant.jpg",
+      "price": 90000,
+      "id": 9
+    }
+  ]
+}
