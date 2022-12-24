@@ -150,3 +150,76 @@ font-size: 18px;
 justify-content: center;
   
 }
+
+.home {
+
+  height: 1500px;
+}
+
+.herocard{
+
+  background-color:green;
+  height: 500px;
+}
+.Ftitle{
+  text-align: center;
+}
+
+
+
+
+.welcome{
+  background-color: aliceblue;
+  height: 250px;
+
+
+}
+.welcomeNote{
+  text-align: center;
+}
+.featured{
+background-color: pink;
+height: 600px;
+
+}
+.iconss{
+  justify-content: center;
+  margin-left: 30%;
+  padding: 20px;
+}
+.moto{
+
+  text-align: center;
+}
+.footer{
+  background-color: gray;
+  height: 300px;
+}
+.footerForm{
+  background-color: cadetblue;
+  height: 80px;
+  display: block;
+  margin-top: 20px;
+}
+.footerInfo{
+
+  display: grid;
+}
+.email{
+  width: 500px;
+  margin-top: 20px;
+}
+.labell{
+  margin-top: 20px;
+}
+.submitt{
+  height: 36px;
+  width: 80px;
+  margin-left: 10px;
+  border-radius: 2px;
+  font: bold;
+}
+.submitt:hover{
+  background-color: green;
+
+}

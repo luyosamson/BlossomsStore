@@ -22,7 +22,7 @@ function Navbar() {
   return (
     <div className="navbar">
         <NavLink 
-        to='/home'
+        to='/'
         style={linkstyle}
         >
         Home
@@ -51,14 +51,14 @@ function Navbar() {
         to='/signup'
          style={linkstyle}
          >
-        <FaUserAlt size='2rem'/>
+        <FaUserAlt size='1.5rem'/>
         </NavLink>
 
         <NavLink
         to='/search'
          style={linkstyle}
          >
-        <BiSearchAlt2 size='2rem' />
+        <BiSearchAlt2 size='1.5rem' />
           </NavLink>
 
         <NavLink 

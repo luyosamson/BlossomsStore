@@ -8,6 +8,7 @@ import Navbar from "./Navbar";
 import Search from "./Search";
 import Cart from "./Cart";
 import Signup from "./Signup";
+import Footer from "./Footer";
 
 function App() {
  
@@ -15,7 +16,7 @@ function App() {
 
   return (
     <div>
-      <Navbar/>
+      <><Navbar/></>
       <Routes>
         <Route  path="/" element={<Home/>}  />
         <Route  path="/flower" element={<Flower />}  />
@@ -25,6 +26,8 @@ function App() {
         <Route  path="/search" element={<Search/>}  />
         <Route  path="/cart" element={<Cart/>}  />
       </Routes>
+       <Footer/>
+
    
     </div>
   );

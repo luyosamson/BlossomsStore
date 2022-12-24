@@ -4,14 +4,18 @@ function Footer() {
   return (
   <div className="footer">
 
-    <form>
-    <label htmlFor="email-notification">Join the community to get notification first.
-    </label><input type="email" name="email" placeholder="Enter your email address"/>
+    <form className="footerForm">
+    <label className="labell" htmlFor="email-notification">Subscribe to our newslater:
+   <input className="email"   type="email" name="email" placeholder="Enter your email address"/>
+    
+    <button className="submitt"   type="submit">Submit</button></label>
     </form>
+    <div className="footerInfo">
     <h3>Contact</h3>
     <h3>Information</h3>
     <h3>Extra</h3>
     <h3>My Account</h3>
+    </div>
 
 
   </div>
