@@ -10,6 +10,7 @@ function Footer() {
     
     <button className="submitt"   type="submit">Submit</button></label>
     </form>
+    <hr></hr>
     <div className="footerInfo">
     <h3>Contact</h3>
     <h3>Information</h3>
