@@ -143,3 +143,10 @@ input:focus {
 .delete{
   background-color: red;
 }
+.navbar{
+text-align: right;
+background-color: antiquewhite;
+font-size: 18px;
+justify-content: center;
+  
+}
