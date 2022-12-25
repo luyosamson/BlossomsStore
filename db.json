@@ -35,6 +35,24 @@
       "image": "./images/zz-plant.jpg",
       "price": 90000,
       "id": 9
+    },
+    {
+      "name": "Rose",
+      "image": "./images/zz-plant.jpg",
+      "price": "1000",
+      "id": 10
+    },
+    {
+      "name": "Rose",
+      "image": "./images/zz-plant.jpg",
+      "price": "1000",
+      "id": 11
+    },
+    {
+      "name": "Rose",
+      "image": "./images/zz-plant.jpg",
+      "price": "1000",
+      "id": 12
     }
   ]
 }
