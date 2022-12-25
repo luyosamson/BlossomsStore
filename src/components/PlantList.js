@@ -5,7 +5,7 @@ function PlantList({items,onDeleteItem,onUpdate}) {
 
 
 
-  const itemPlants=items.map((item)=>(
+  const itemPlants=items?.map((item)=>(
 
     <PlantCard key={item.id}
      item={item} 

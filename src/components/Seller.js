@@ -1,5 +1,6 @@
 import React from 'react'
 import NewPlantForm from "./NewPlantForm"
+import PlantPage from './PlantPage'
 
 function Seller() {
   return (
@@ -7,6 +8,8 @@ function Seller() {
       <h3>Seller</h3>
 
       <NewPlantForm />
+      {/* <PlantPage/> */}
+      
     </div>
   )
 }

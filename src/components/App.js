@@ -9,6 +9,7 @@ import Search from "./Search";
 import Cart from "./Cart";
 import Signup from "./Signup";
 import Footer from "./Footer";
+import PlantPage from "./PlantPage";
 
 function App() {
  
@@ -25,6 +26,7 @@ function App() {
         <Route  path="/signup" element={<Signup/>}  />
         <Route  path="/search" element={<Search/>}  />
         <Route  path="/cart" element={<Cart/>}  />
+        <Route path="/plantpage" element={<PlantPage/>} />
       </Routes>
        <Footer/>
 
