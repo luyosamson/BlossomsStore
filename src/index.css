@@ -59,15 +59,57 @@ main {
   padding: 2rem 1rem;
   margin: 2rem 0;
   background-color: rgba(181, 250, 181, 0.5);
-  display: block;
-  height: 800px;
-  width: 500px;
+  height: 600px;
+  /* width: 500px; */
 }
 
 .new-plant-form form {
-  display: flex;
+  display: block;
   justify-content: center;
+  /* background-color: pink; */
+  /* position: relative;
+  top: 5%;
+  left: 40%; */
+  /* width: 400px;
+  height:500px ; */
 }
+.postProduct{
+    position: relative;
+    top: 5%;
+    left: 40%;
+    width: 400px;
+    height: 500px;
+    background-color: aqua;
+
+}
+.new-plant-form form input{
+  margin-top: 10px;
+  margin-left: 150px;
+  width: 200px;
+
+}
+/* .new-plant-form form label {
+  margin-top: 10px;
+  margin-left:20px;
+  width: 200px;
+
+} */
+.new-plant-form form button {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 150px;
+  height: 30px;
+  position: relative;
+  left: 30%;
+  top:100%;
+
+}
+.textarea {
+  height: 100px;
+  padding-left: 20px;
+
+}
+
 
 .new-plant-form input {
   margin-right: 2rem;
