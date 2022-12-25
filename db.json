@@ -49,10 +49,46 @@
       "id": 11
     },
     {
-      "name": "Rose",
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 14
+    },
+    {
+      "name": "Education",
       "image": "./images/zz-plant.jpg",
-      "price": "1000",
-      "id": 12
+      "price": "23",
+      "id": 15
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 16
+    },
+    {
+      "name": "Flower",
+      "image": "./images/zz-plant.jpg",
+      "price": "10000000",
+      "id": 17
+    },
+    {
+      "name": "Flower",
+      "image": "./images/zz-plant.jpg",
+      "price": "10000000",
+      "id": 18
+    },
+    {
+      "name": "Luyo Samson",
+      "image": "./images/zz-plant.jpg",
+      "price": "88",
+      "id": 19
+    },
+    {
+      "name": "Luyo Samson",
+      "image": "./images/zz-plant.jpg",
+      "price": "88",
+      "id": 20
     }
   ]
 }
