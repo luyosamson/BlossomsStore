@@ -12,10 +12,10 @@ function Footer() {
     </form>
     <hr></hr>
     <div className="footerInfo">
-    <h3>Contact</h3>
-    <h3>Information</h3>
-    <h3>Extra</h3>
-    <h3>My Account</h3>
+    <h3 className="contact">Contact</h3>
+    <h3 className="information">Information</h3>
+    <h3 className="extra">Extra</h3>
+    <h3 className="account">My Account</h3>
     </div>
 
 
