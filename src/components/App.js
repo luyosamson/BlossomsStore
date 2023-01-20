@@ -1,15 +1,15 @@
 import React from "react";
 import { Routes,Route } from "react-router-dom";
-import Home from "./Home";
-import Flower from "./Flower";
-import Plant from "./Plant";
-import Seller from "./Seller";
-import Navbar from "./Navbar";
-import Search from "./Search";
-import Cart from "./Cart";
-import Signup from "./Signup";
-import Footer from "./Footer";
-import PlantPage from "./PlantPage";
+import Home from "./home/Home";
+import Flower from "./flower/Flower";
+import Plant from "./plants/Plant";
+import Seller from "./seller/Seller";
+import Navbar from "./navbar/Navbar";
+import Search from "./search/Search";
+import Cart from "./cart/Cart";
+import Signup from "./signup/Signup";
+import Footer from "./footer/Footer";
+import PlantPage from "./plantpage/PlantPage";
 
 function App() {
  

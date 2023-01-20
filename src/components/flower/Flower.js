@@ -1,8 +1,9 @@
 import React from 'react'
+import './Flower.css'
 
 function Flower() {
   return (
-    <div>Flower</div>
+    <div className='flower'>Flower</div>
   )
 }
 

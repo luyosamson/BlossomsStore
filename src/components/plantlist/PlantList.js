@@ -1,5 +1,5 @@
 import React from "react";
-import PlantCard from "./PlantCard";
+import PlantCard from "../plantcard/PlantCard";
 
 function PlantList({items,onDeleteItem,onUpdate}) {
 

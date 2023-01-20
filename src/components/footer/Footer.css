@@ -1,0 +1,26 @@
+.footer {
+    background-color: black;
+    height: 300px;
+    color: white;
+}
+
+.footerForm {
+    background-color: black;
+    height: 80px;
+    display: block;
+    margin-top: 20px;
+    color: white;
+}
+
+.footerInfo {
+
+    display: grid;
+    grid-template-columns: 200px;
+
+
+}
+
+.email {
+    width: 500px;
+    margin-top: 20px;
+}

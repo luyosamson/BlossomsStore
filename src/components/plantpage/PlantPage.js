@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from "react";
-import NewPlantForm from "./NewPlantForm";
-import PlantList from "./PlantList";
-import Search from "./Search";
+import NewPlantForm from "../newplantForm/NewPlantForm";
+import PlantList from "../plantlist/PlantList";
+import Search from "../search/Search";
 
 function PlantPage() {
 
@@ -52,7 +52,7 @@ function PlantPage() {
 
   return (
     <main>
-      <NewPlantForm onAddPlant={handleAddPlant}/>
+      {/* <NewPlantForm onAddPlant={handleAddPlant}/> */}
       <Search onSearch={searchTerm} onChangeSearch={setsearchTerm}/>
       <PlantList  
       items={plantsToDisplay} 
