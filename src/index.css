@@ -127,9 +127,11 @@ main {
   width: 100px;
 }
 
-label {
+form label {
   font-weight: bold;
   display: block;
+
+
 }
 
 input {
@@ -210,81 +212,18 @@ justify-content: center;
   text-align: center;
 }
 
-
-
-
 .welcome{
   background-color: aliceblue;
   height: 250px;
-
-
-}
-.welcomeNote{
-  text-align: center;
-}
-.featured{
-background-color: pink;
-height: 600px;
-
-}
-.iconss{
-  justify-content: center;
-  margin-left: 30%;
-  padding: 20px;
-}
-.moto{
-
-  text-align: center;
-}
-.footer{
-  background-color: black;
-  height: 300px;
-  color: white;
-}
-.footerForm{
-  background-color: black;
-  height: 80px;
-  display: block;
-  margin-top: 20px;
-  color: white;
-}
-.footerInfo{
-
-  display: grid;
-  grid-template-columns: 200px ;
-
-  
-}
-.email{
-  width: 500px;
-  margin-top: 20px;
-}
-.labell{
-  margin-top: 20px;
-  
-}
-.submitt{
-  height: 36px;
-  width: 80px;
-  margin-left: 10px;
-  border-radius: 2px;
-  font: bold;
-}
-.submitt:hover{
-  background-color: green;
-
-}
-.heroButton{
-  margin-top: 400px;
-  margin-left: 100px;
-  height: 50px;
-  width: 150px;
-  border-radius: 10px;
-  font-size: 15px;
   
 
-}
-.heroButton:hover{
-  background-color: green;
 
 }
+
+
+/* .new-plant-form input{
+  margin-left: 0px;
+
+
+
+} */
