@@ -1,11 +1,71 @@
 {
   "plants": [
     {
+      "name": "Aloe",
+      "image": "./images/aloe.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 4
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/jade.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 5
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/jade.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 6
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/aloe.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 7
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/jade.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 8
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/jade.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 9
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/aloe.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 10
+    },
+    {
       "name": "",
       "image": "",
       "price": "",
       "description": "",
-      "id": 1
+      "id": 11
     }
+  ],
+  "flower":[
+      {
+      "name": "Aloe Vera",
+      "image": "./images/aloe.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 10
+    }
+
+
   ]
 }

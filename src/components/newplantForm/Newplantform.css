@@ -1,0 +1,58 @@
+.postProduct {
+    position: relative;
+    top: 5%;
+    left: 40%;
+    width: 400px;
+    height: 500px;
+    background-color: aqua;
+
+}
+
+.new-plant-form form input {
+    margin-top: 10px;
+    margin-left: 150px;
+    width: 200px;
+
+}
+
+.new-plant-form form button {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 150px;
+    height: 30px;
+    position: relative;
+    left: 30%;
+    top: 100%;
+
+}
+
+.textarea {
+    height: 100px;
+    padding-left: 20px;
+
+}
+
+
+.new-plant-form input {
+    margin-right: 2rem;
+    flex: 1;
+}
+
+.new-plant-form button {
+    width: 150px;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+}
+
+input {
+    padding: 0.25rem;
+    border: none;
+    font-family: inherit;
+    font-size: 1.2em;
+    border-bottom: 2px solid gray;
+    transition: all 0.2s;
+    width: 100%;
+}

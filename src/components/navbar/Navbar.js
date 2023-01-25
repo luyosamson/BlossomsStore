@@ -1,4 +1,5 @@
 import React from "react";
+import './Navbar.css'
 import { NavLink } from "react-router-dom";
 import {BiSearchAlt2} from "react-icons/bi"
 import {CgShoppingCart} from "react-icons/cg"

@@ -1,0 +1,19 @@
+/* .cards {
+    list-style: none;
+} */
+/*  */
+/* @media (min-width: 768px) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+} */
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+   
+}

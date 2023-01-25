@@ -1,0 +1,58 @@
+.herocard {
+
+    background-color:bisque;;
+    height: 500px;
+    display: block;
+}
+img{
+    margin-left: 0px;
+    
+}
+.image3{
+    height: 500px;
+}
+.heroButton{
+    background-color: pink;
+    float: right;
+    margin-right: 100px;
+}
+.heroButton:hover{
+    background-color:green;
+}
+.images{
+    display: block;   
+}
+p{
+    text-align: center;
+    display: block;
+    font-size: larger;
+    
+}
+
+/* Define the @keyframes rule */
+/* @keyframes animation-name {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(100px);
+    }
+
+    50% {
+        transform: translateX(200px);
+    }
+
+    75% {
+        transform: translateX(300px);
+    }
+
+    100% {
+        transform: translateX(400px);
+    }
+} */
+
+/* Apply the animation to the images */
+/* .herocard img {
+    animation: animation-name 3s infinite;
+} */

@@ -51,103 +51,39 @@ header h1 {
   text-shadow: 0 0 0 var(--green);
 }
 
-main {
-  padding: 0 1rem;
-}
 
-.new-plant-form {
-  padding: 2rem 1rem;
-  margin: 2rem 0;
-  background-color: rgba(181, 250, 181, 0.5);
-  height: 600px;
-  /* width: 500px; */
-}
 
-.new-plant-form form {
+
+
+/* .new-plant-form form {
   display: block;
-  justify-content: center;
+  justify-content: center; */
   /* background-color: pink; */
   /* position: relative;
   top: 5%;
   left: 40%; */
   /* width: 400px;
   height:500px ; */
-}
-.postProduct{
-    position: relative;
-    top: 5%;
-    left: 40%;
-    width: 400px;
-    height: 500px;
-    background-color: aqua;
+/* } */
 
-}
-.new-plant-form form input{
-  margin-top: 10px;
-  margin-left: 150px;
-  width: 200px;
-
-}
 /* .new-plant-form form label {
   margin-top: 10px;
   margin-left:20px;
   width: 200px;
 
 } */
-.new-plant-form form button {
-  margin-top: 10px;
-  margin-left: 10px;
-  width: 150px;
-  height: 30px;
-  position: relative;
-  left: 30%;
-  top:100%;
-
-}
-.textarea {
-  height: 100px;
-  padding-left: 20px;
-
-}
 
 
-.new-plant-form input {
-  margin-right: 2rem;
-  flex: 1;
-}
-
-.new-plant-form button {
-  width: 150px;
-}
-
-.searchbar {
-  padding: 1rem;
-  display:block;
-  flex-direction: column;
-  width: 100px;
-}
-
-form label {
-  font-weight: bold;
-  display: block;
 
 
-}
 
-input {
-  padding: 0.25rem;
-  border: none;
-  font-family: inherit;
-  font-size: 1.2em;
-  border-bottom: 2px solid gray;
-  transition: all 0.2s;
-  width: 100%;
-}
 
-input:focus {
+
+
+/* input:focus {
   outline: none;
   border-bottom: 2px solid var(--green);
-}
+} */
 
 .cards {
   list-style: none;
@@ -187,38 +123,9 @@ input:focus {
     width: calc(20% - 2rem);
   }
 }
-.delete{
-  background-color: red;
-}
-.navbar{
-text-align: right;
-background-color: antiquewhite;
-font-size: 18px;
-justify-content: center;
-  
-}
-
-.home {
-
-  height: 1300px;
-}
-
-.herocard{
-
-  background-color:pink;
-  height: 500px;
-}
-.Ftitle{
-  text-align: center;
-}
-
-.welcome{
-  background-color: aliceblue;
-  height: 250px;
-  
 
 
-}
+
 
 
 /* .new-plant-form input{

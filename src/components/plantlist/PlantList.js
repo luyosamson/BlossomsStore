@@ -1,26 +1,23 @@
-import React from "react";
-import PlantCard from "../plantcard/PlantCard";
+import React from 'react'
+import PlantCard from '../plantcard/PlantCard'
+import './Plantlist.css'
 
-function PlantList({items,onDeleteItem,onUpdate}) {
+function PlantList({items}) {
+  const newItem=items.slice(0,4)
+  
 
-
-
-  const itemPlants=items?.map((item)=>(
-
-    <PlantCard key={item.id}
-     item={item} 
-     onDeleteItem={onDeleteItem} 
-     onUpdate={onUpdate} />
-  ))
-
-
-
-  return (
-    <ul className="cards">{/* render PlantCards components in here */
-    itemPlants
-    
-    }</ul>
+return (
+    <ul className='cards'>
+      { newItem?.map(newItems=> (
+     <PlantCard
+    key={newItems.id}
+    newItem={newItems}
+    />
+      ))}
+   </ul>
   );
 }
 
-export default PlantList;
+
+export default PlantList
+

@@ -5,6 +5,8 @@ import Welcome from "../welcome/Welcome";
 import Featured from '../featured/Featured'
 import Flower from "../flower/Flower";
 import Plant from "../plants/Plant";
+import PlantPage from '../plantpage/PlantPage'
+import './Home.css'
 
 
 
@@ -16,6 +18,8 @@ function Home() {
   <Hero />
   <Welcome />
   <Featured />
+
+
 
  
     </div>

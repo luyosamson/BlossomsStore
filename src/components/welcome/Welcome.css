@@ -11,3 +11,8 @@
 .welcomeNote {
     text-align: center;
 }
+.welcome {
+    background-color: aliceblue;
+    height: 250px;
+
+}
