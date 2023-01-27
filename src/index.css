@@ -27,6 +27,11 @@ button.primary {
   background-color: var(--green);
   color: white;
 }
+
+button.soldOut{
+  background-color: red;
+}
+
 button.secondary:hover {
   background-color: red;
 
@@ -50,40 +55,6 @@ header h1 {
   color: transparent;
   text-shadow: 0 0 0 var(--green);
 }
-
-
-
-
-
-/* .new-plant-form form {
-  display: block;
-  justify-content: center; */
-  /* background-color: pink; */
-  /* position: relative;
-  top: 5%;
-  left: 40%; */
-  /* width: 400px;
-  height:500px ; */
-/* } */
-
-/* .new-plant-form form label {
-  margin-top: 10px;
-  margin-left:20px;
-  width: 200px;
-
-} */
-
-
-
-
-
-
-
-
-/* input:focus {
-  outline: none;
-  border-bottom: 2px solid var(--green);
-} */
 
 .cards {
   list-style: none;

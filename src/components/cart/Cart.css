@@ -1,0 +1,50 @@
+table {
+    width: 100%;
+    /* Set the table width to 100% */
+    border-collapse: collapse;
+    /* Remove the space between cells */
+
+}
+
+th,
+td {
+    border: 1px solid black;
+    /* Add a border to the cells */
+    padding: 8px;
+    /* Add padding to the cells */
+    text-align: left;
+    /* Align the text to the left */
+}
+
+th {
+    background-color: gray;
+    /* Add a gray background color to the header cells */
+    color: white;
+    /* Make the text in the header cells white */
+}
+
+/* Use the nth-child selector to target the specific columns */
+td:nth-child(1) {
+    width: 20%;
+    /* Set the width of the first column to 20% */
+}
+
+td:nth-child(2) {
+    width: 15%;
+    /* Set the width of the second column to 15% */
+}
+
+td:nth-child(3) {
+    width: 25%;
+    /* Set the width of the third column to 25% */
+}
+
+td:nth-child(4) {
+    width: 30%;
+    /* Set the width of the fourth column to 30% */
+}
+
+td:nth-child(5) {
+    width: 10%;
+    /* Set the width of the fifth column to 10% */
+}

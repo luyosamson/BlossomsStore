@@ -67,7 +67,7 @@ function Navbar() {
          style={linkstyle}
          
          >
-          <CgShoppingCart size='2rem'/>
+          <CgShoppingCart size='2rem'/><span>0</span>
         </NavLink>
       
 

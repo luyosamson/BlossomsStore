@@ -1,8 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Plantcard.css'
 
 function PlantCard({newItem}) {
-  // const {image,name,price,description}=newItem
+const [inStock,setinStock]=useState(true)
+
+ function onStockToggle(){
+setinStock((inStock) => !inStock);
+
+ }
   return (
     <div>
   <li className='card'>
@@ -11,6 +16,11 @@ function PlantCard({newItem}) {
        <div className='details'>
       <p>{newItem.name}</p>
       <p>Ksh.{newItem.price}</p>
+          {inStock ? (
+        <button className="primary" onClick={onStockToggle}>In Stock</button>
+      ) : (
+        <button className='soldOut'    onClick={onStockToggle}>Sold Out</button>
+      )}
       <button>Add to Cart</button>
       </div>
       </div>

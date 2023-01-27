@@ -9,7 +9,7 @@ function Featured() {
     <div className='featured'>
       <h2 className='Ftitle'>Featured Products</h2>
       <div className='item'>
-    <PlantPage/>
+    {/* <PlantPage/> */}
     
       </div>
       </div>
