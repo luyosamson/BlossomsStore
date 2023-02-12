@@ -1,4 +1,6 @@
 import React from 'react'
+import Formdata from './Formdata'
+import './Plantform.css'
 
 function Plantform({items}) {
   return (
@@ -12,16 +14,20 @@ function Plantform({items}) {
                       <th>Price</th>
                        <th>Status</th>
                 </tr>
-
-
+                {
+                    items.map(newItem=>
+                        <Formdata 
+                        key={newItem.id}
+                        newItem={newItem}
+                        
+                        />
+                        
+                        )
+                        }
+      
 
             </tbody>
         </table>
-
-
-
-
-
     </div>
   )
 }
