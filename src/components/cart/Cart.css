@@ -1,50 +1,80 @@
-table {
-    width: 100%;
-    /* Set the table width to 100% */
-    border-collapse: collapse;
-    /* Remove the space between cells */
-
+* {
+    margin: 0;
+    padding: 0;
 }
 
-th,
-td {
-    border: 1px solid black;
-    /* Add a border to the cells */
-    padding: 8px;
-    /* Add padding to the cells */
-    text-align: left;
-    /* Align the text to the left */
+article {
+    width: 60%;
+    margin: auto;
 }
 
-th {
-    background-color: gray;
-    /* Add a gray background color to the header cells */
+.cart_box img {
+    width: 50px;
+    height: 50px;
+}
+
+.cart_img {
+    display: flex;
+    width: 400px;
+}
+
+.cart_img p {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.cart_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-bottom: 2px solid skyblue;
+    padding-bottom: 5px;
+}
+
+.cart_box div:nth-child(2) button {
+    padding: 5px 10px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.cart_box div:nth-child(3) button {
+    padding: 5px 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+    outline: none;
     color: white;
-    /* Make the text in the header cells white */
+    background-color: skyblue;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Use the nth-child selector to target the specific columns */
-td:nth-child(1) {
-    width: 20%;
-    /* Set the width of the first column to 20% */
+.cart_box div:nth-child(3) button:hover {
+    background-color: darkseagreen;
 }
 
-td:nth-child(2) {
-    width: 15%;
-    /* Set the width of the second column to 15% */
+.cart_box div:nth-child(3) span {
+    background-color: lightgreen;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
-td:nth-child(3) {
-    width: 25%;
-    /* Set the width of the third column to 25% */
+.total {
+    display: flex;
+    justify-content: space-between;
 }
 
-td:nth-child(4) {
-    width: 30%;
-    /* Set the width of the fourth column to 30% */
+.total span:nth-child(1) {
+    font-size: 2rem;
+    color: skyblue;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-td:nth-child(5) {
-    width: 10%;
-    /* Set the width of the fifth column to 10% */
+.total span:nth-child(2) {
+    font-size: 2rem;
+    color: green;
+    font-weight: bold;
 }

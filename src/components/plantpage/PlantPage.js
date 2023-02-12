@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import PlantList from '../plantlist/PlantList'
 import Pagination from '../pagination/Pagination'
 
-function PlantPage() {
+function PlantPage({handleClick}) {
   const [items,setItems]=useState([])
   const [currentPage,setCurrentPage]=useState(1)
   const [postPerPage,setPostperpage]=useState(8)
@@ -16,6 +16,10 @@ useEffect(()=>{
   .then((items)=>setItems(items))
 },[])
 
+  // function handleAddPlant(added){
+  //     setItems([...items,added])
+  // }
+
 const lastPostindex=currentPage*postPerPage;
 const firstPostindex=lastPostindex-postPerPage;
 const currentPosts=items.slice(firstPostindex,lastPostindex);
@@ -23,7 +27,8 @@ const currentPosts=items.slice(firstPostindex,lastPostindex);
 
   return (
     <div>
-  <PlantList items={currentPosts}/>  
+  <PlantList items={currentPosts}
+  handleClick={handleClick}/>  
 
       <Pagination 
         totalPosts={items.length}

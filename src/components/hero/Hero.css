@@ -12,7 +12,7 @@ img{
     height: 500px;
 }
 .heroButton{
-    background-color: pink;
+    background-color:red;
     float: right;
     margin-right: 100px;
 }
@@ -22,37 +22,14 @@ img{
 .images{
     display: block;   
 }
-p{
-    text-align: center;
-    display: block;
-    font-size: larger;
-    
+.herocard {
+    display: inline-block;
+    animation: herocard-images 60s linear infinite;
 }
-
-/* Define the @keyframes rule */
-/* @keyframes animation-name {
-    0% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(100px);
-    }
-
-    50% {
-        transform: translateX(200px);
-    }
-
-    75% {
-        transform: translateX(300px);
-    }
-
-    100% {
-        transform: translateX(400px);
-    }
-} */
-
-/* Apply the animation to the images */
-/* .herocard img {
-    animation: animation-name 3s infinite;
-} */
+.herocard img {
+    display: inline-block; 
+    height: 500px;
+    width: 2000px;
+    position: absolute;
+   
+}

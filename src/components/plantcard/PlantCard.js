@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import './Plantcard.css'
 
-function PlantCard({newItem}) {
+function PlantCard({newItem,handleClick}) {
 const [inStock,setinStock]=useState(true)
 
  function onStockToggle(){
@@ -21,7 +21,7 @@ setinStock((inStock) => !inStock);
       ) : (
         <button className='soldOut'    onClick={onStockToggle}>Sold Out</button>
       )}
-      <button>Add to Cart</button>
+      <button onClick={()=>handleClick(newItem)}>Add to Cart</button>
       </div>
       </div>
   </li>

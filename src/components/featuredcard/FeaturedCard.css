@@ -1,0 +1,17 @@
+.Featuredcard img {
+    width: 300px;
+    height: 300px;
+}
+
+.Featuredcard {
+    margin-left: 50px;
+}
+
+.details {
+    display: flexbox;
+}
+
+.Featuredcard button {
+    width: 200px;
+    height: 30px;
+}

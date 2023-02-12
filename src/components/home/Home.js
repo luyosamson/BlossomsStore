@@ -6,7 +6,9 @@ import Featured from '../featured/Featured'
 import Flower from "../flower/Flower";
 import Plant from "../plants/Plant";
 import PlantPage from '../plantpage/PlantPage'
+import Reviews from "../platformreviews/Reviews";
 import './Home.css'
+import ReviewsPage from "../reviewpage/ReviewsPage";
 
 
 
@@ -18,6 +20,8 @@ function Home() {
   <Hero />
   <Welcome />
   <Featured />
+  <Reviews/>
+  
 
 
 

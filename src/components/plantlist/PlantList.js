@@ -2,7 +2,7 @@ import React from 'react'
 import PlantCard from '../plantcard/PlantCard'
 import './Plantlist.css'
 
-function PlantList({items}) {
+function PlantList({items,handleClick}) {
 
   
 
@@ -12,6 +12,7 @@ return (
      <PlantCard
     key={newItems.id}
     newItem={newItems}
+    handleClick={handleClick}
     />
       ))}
    </ul>

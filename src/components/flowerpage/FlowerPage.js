@@ -3,12 +3,12 @@ import FlowerList from '../flowerlist/FlowerList'
 import Pagination from '../pagination/Pagination'
 
 
-function FlowerPage() {
+function FlowerPage({handleClick}) {
   const [list,setList]=useState([])
   const [currentPage,setCurrentPage]=useState(1)
   const [postPerPage,setPostperpage]=useState(8)
 
-  const [inCart,setCart]=useState()
+ 
 
  
 
@@ -25,10 +25,13 @@ const currentPosts=list.slice(firstPostindex,lastPostindex);
 
 
 
+
   return (
     <div>
         <FlowerList
-        list={currentPosts}/>
+        key={list.id}
+        list={currentPosts}
+         handleClick={handleClick}/>
 
         <Pagination 
         totalPosts={list.length}
@@ -38,6 +41,7 @@ const currentPosts=list.slice(firstPostindex,lastPostindex);
         setPostperpage={setPostperpage}
         
         />
+        
         
     </div>
   )

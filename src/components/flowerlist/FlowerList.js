@@ -3,7 +3,7 @@ import './FlowerList.css'
 import FlowerCard from '../flowercard/FlowerCard'
 
 
-function FlowerList({list}) {
+function FlowerList({list,handleClick}) {
 
 
 
@@ -15,17 +15,14 @@ function FlowerList({list}) {
             list?.map(newList=>(
                 <FlowerCard
                 key={newList.id}
-                newList={newList}/>
+                newList={newList}
+                handleClick={handleClick}
+               />
 
             ))
         }
-      
-        
     </ul>
-   
-
-    </div>
-    
+    </div> 
   )
 }
 

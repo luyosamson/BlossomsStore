@@ -19,7 +19,11 @@ const linkstyle={
   
 }
 
-function Navbar() {
+function Navbar({size}) {
+
+
+
+   
   return (
     <div className="navbar">
         <NavLink 
@@ -67,9 +71,8 @@ function Navbar() {
          style={linkstyle}
          
          >
-          <CgShoppingCart size='2rem'/><span>0</span>
+          <CgShoppingCart size='2rem'/><span>{size}</span>
         </NavLink>
-      
 
     </div>
   );

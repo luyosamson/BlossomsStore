@@ -34,10 +34,10 @@ function handleAddPlant(e){
   .then((r)=>r.json())
   .then((item)=>onAddPlant(item))
 
-
+  
 }
 function productSubmit(){
-  onclick()
+  // onclick()
     
   history.push('/plantpage')
 

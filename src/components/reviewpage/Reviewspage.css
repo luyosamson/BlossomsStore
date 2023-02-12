@@ -1,0 +1,57 @@
+
+
+.reviewCard{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+}
+
+.reviewCard img {
+    /* width: calc(100% / 7 - 10px); */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* .slider {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+} */
+
+.slides {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: slide 20s infinite;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    animation:forwards;
+}
+
+/* @keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+} */

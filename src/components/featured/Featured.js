@@ -1,5 +1,6 @@
 import React from 'react'
-import PlantPage from '../plantpage/PlantPage'
+import FeaturedPage from '../featuredpage/FeaturedPage'
+// import PlantPage from '../plantpage/PlantPage'
 import './Featured.css'
 
 function Featured() {
@@ -9,7 +10,7 @@ function Featured() {
     <div className='featured'>
       <h2 className='Ftitle'>Featured Products</h2>
       <div className='item'>
-    {/* <PlantPage/> */}
+      <FeaturedPage/>
     
       </div>
       </div>

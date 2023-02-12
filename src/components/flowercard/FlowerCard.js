@@ -1,6 +1,6 @@
 import React from 'react'
 
-function FlowerCard({newList}) {
+function FlowerCard({newList,handleClick}) {
   return (
     <div>
     <li className='card'>
@@ -9,7 +9,7 @@ function FlowerCard({newList}) {
        <div className='details'>
       <p>{newList.name}</p>
       <p>Ksh.{newList.price}</p>
-      <button>Add to Cart</button>
+      <button onClick={()=>handleClick(newList)}>Add to Cart</button>
       </div>
       </div>
   </li>
@@ -19,3 +19,4 @@ function FlowerCard({newList}) {
 }
 
 export default FlowerCard
+

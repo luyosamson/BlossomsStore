@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Routes,Route } from "react-router-dom";
 import Home from "./home/Home";
 import Flower from "./flower/Flower";
@@ -11,22 +11,54 @@ import Signup from "./signup/Signup";
 import Footer from "./footer/Footer";
 import PlantPage from "./plantpage/PlantPage";
 
+import Sellerflowers from './sellerflowers/Sellerflowers';
+import Sellerplants from './sellerplants/Sellerplants';
+
+
 function App() {
+
+    const [cart, setCart] = useState([]);
+
+  const handleClick = (item) => {
+    if (cart.indexOf(item) !== -1) return;
+    setCart([...cart, item]);
+  };
+
  
 
+  const handleChange = (item, d) => {
+    
+    const ind = cart.indexOf(item);
+    const arr = cart;
+    arr[ind].amount += d;
+
+    if (arr[ind].amount === 0) arr[ind].amount = 1;
+    setCart([...arr])
+
+    }
 
   return (
     <div>
-    <Navbar/>
+    <Navbar size={cart.length}/>
       <Routes>
         <Route  path="/" element={<Home/>}  />
-        <Route  path="/flower" element={<Flower />}  />
-        <Route  path="/plant" element={<Plant/>}  />
+        <Route  path="/flower" element={<Flower handleClick={handleClick}/>}
+          />
+        <Route  path="/plant" element={<Plant handleClick={handleClick}/>}  />
         <Route  path="/seller" element={<Seller/>}  />
         <Route  path="/signup" element={<Signup/>}  />
         <Route  path="/search" element={<Search/>}  />
-        <Route  path="/cart" element={<Cart/>}  />
+        <Route  path="/cart" element={<Cart cart={cart} 
+        setCart={setCart}
+        handleChange={handleChange}/>}
+          />
         <Route  path="/plantpage" element={<PlantPage/>} />
+
+          <Route path="/plants" element={<Sellerplants/>} />
+          <Route path='/flowers' element={<Sellerflowers/>} />
+          <Route path='/seller' element={<Seller/>} />
+
+        
       </Routes>
        <Footer/>
 
@@ -36,3 +68,6 @@ function App() {
 }
 
 export default App;
+
+
+

@@ -1,8 +1,9 @@
 import React from 'react'
 import PlantPage from '../plantpage/PlantPage'
+import Dashboard from '../dashboard/Dashboard'
 import './Plants.css'
 
-function Plant() {
+function Plant({handleClick}) {
   return (
     <div className='plants'>
       Filter By<select>
@@ -19,7 +20,8 @@ function Plant() {
 
         </optgroup>
       </select>
-      <PlantPage/>
+      <PlantPage  handleClick={handleClick}/>
+      
     </div>
   )
 }
