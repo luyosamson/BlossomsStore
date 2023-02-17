@@ -47,9 +47,9 @@ function Navbar({size}) {
         </NavLink>
 
         <NavLink
-        to="seller"
+        to="/dashboard"
          style={linkstyle}>
-        Seller 
+        Dashboard
         </NavLink>
 
         <NavLink

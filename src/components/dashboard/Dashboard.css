@@ -1,0 +1,25 @@
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 0% 100%;
+    grid-gap: 0;
+}
+
+
+.menu{
+
+    width: 500px;
+    height: 600px;
+    background-color:brown;
+}
+
+
+.products{
+    margin-left: 500px;
+    padding-top: 0px;
+    margin-left: 500px;
+    height: 600px;
+    grid-column-gap: 0;
+   
+
+}

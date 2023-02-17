@@ -16,5 +16,9 @@
 .card button:hover{
   background-color: gold;
 }
+.status{
+  font: bold;
+  color:green;
+}
 
 

@@ -1,4 +1,4 @@
-import React,{NavLink} from "react";
+import React from "react";
 import Register from "../register/Register";
 import './Signup.css'
 

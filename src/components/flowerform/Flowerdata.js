@@ -1,18 +1,18 @@
 import React,{useState} from 'react'
-import './Plantform.css'
+// import './Plantform.css'
 
-function Formdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
+function Flowerdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
 
   
 
    const [updatedPrice, setUpdatedPrice] = useState(newItem.price);
 
 
-  const [inStock, setinStock] = useState(true);
+  const [inStock, setinStock] = useState(false);
 
 
   function handleDelete(){
-    fetch(`http://localhost:6001/plants/${newItem.id}`,{
+    fetch(`http://localhost:6001/flowers/${newItem.id}`,{
         method:'DELETE'
     })
 
@@ -24,7 +24,7 @@ function Formdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
 
   function handleUpdatePrice(){
 
-    fetch(`http://localhost:6001/plants/${newItem.id}`,{
+    fetch(`http://localhost:6001/flowers/${newItem.id}`,{
       method:'PATCH',
       headers:{
         "Content-Type":"application/json"
@@ -41,7 +41,7 @@ function Formdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
     e.preventDefault()
       setinStock(!inStock);
    
-    fetch(`http://localhost:6001/plants/${newItem.id}`,{
+    fetch(`http://localhost:6001/flowers/${newItem.id}`,{
       method:"PATCH",
       headers:{
               "Content-Type":"application/json",
@@ -67,7 +67,7 @@ function Formdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
             <td>
               <button onClick={handleSubmitStatus}>
 
-                {inStock ? 'In Stock' : 'Sold Out'}
+                {inStock ? 'Sold Out' : 'In Stock'}
 
               </button>
             
@@ -85,5 +85,4 @@ function Formdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
   )
 }
 
-export default Formdata
-  
+export default Flowerdata

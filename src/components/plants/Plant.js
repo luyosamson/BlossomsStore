@@ -1,6 +1,5 @@
 import React from 'react'
 import PlantPage from '../plantpage/PlantPage'
-import Dashboard from '../dashboard/Dashboard'
 import './Plants.css'
 
 function Plant({handleClick}) {

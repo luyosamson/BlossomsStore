@@ -13,9 +13,7 @@ import Dashboard from '../dashboard/Dashboard'
 function Seller() {
   return (
     <div>
-     
-
-      <NewPlantForm />
+    
          <Dashboard/>
 
       

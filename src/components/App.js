@@ -13,6 +13,7 @@ import PlantPage from "./plantpage/PlantPage";
 
 import Sellerflowers from './sellerflowers/Sellerflowers';
 import Sellerplants from './sellerplants/Sellerplants';
+import Dashboard from "./dashboard/Dashboard";
 
 
 function App() {
@@ -45,22 +46,18 @@ function App() {
         <Route  path="/flower" element={<Flower handleClick={handleClick}/>}
           />
         <Route  path="/plant" element={<Plant handleClick={handleClick}/>}  />
-        <Route  path="/seller" element={<Seller/>}  />
+        <Route  path="/dashboard" element={<Dashboard/>}  />
         <Route  path="/signup" element={<Signup/>}  />
         <Route  path="/search" element={<Search/>}  />
         <Route  path="/cart" element={<Cart cart={cart} 
         setCart={setCart}
         handleChange={handleChange}/>}
           />
-        <Route  path="/plantpage" element={<PlantPage/>} />
-
-          <Route path="/plants" element={<Sellerplants/>} />
-          <Route path='/flowers' element={<Sellerflowers/>} />
-          <Route path='/seller' element={<Seller/>} />
-
-        
+        <Route  path="/plantpage" element={<PlantPage/>} />        
       </Routes>
+       <Dashboard/>
        <Footer/>
+      
 
    
     </div>

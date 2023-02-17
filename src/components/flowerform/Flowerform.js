@@ -1,8 +1,8 @@
 import React from 'react'
-import Formdata from './Formdata'
-import './Plantform.css'
+import Flowerdata from './Flowerdata'
 
-function Plantform({items,onDeleteItem,onUpdatedPrice,updatestatus}) {
+
+function Flowerform({items,onDeleteItem,onUpdatedPrice,updatestatus}) {
   return (
     <div>
 
@@ -18,7 +18,7 @@ function Plantform({items,onDeleteItem,onUpdatedPrice,updatestatus}) {
                 </tr>
                 {
                     items.map(newItem=>
-                        <Formdata 
+                        <Flowerdata 
                         key={newItem.id}
                         newItem={newItem}
                         onDeleteItem={onDeleteItem}
@@ -37,4 +37,4 @@ function Plantform({items,onDeleteItem,onUpdatedPrice,updatestatus}) {
   )
 }
 
-export default Plantform
+export default Flowerform

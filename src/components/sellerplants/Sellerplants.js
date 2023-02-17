@@ -7,6 +7,7 @@ function Sellerplants() {
 
   const [items,setItems]=useState([])
 
+
   useEffect(()=>{
     fetch("http://localhost:6001/plants")
     .then((r)=>r.json())
@@ -14,9 +15,45 @@ function Sellerplants() {
 
   },[])
 
+
+  function handleDeleteItem(deleteditem){
+
+    const updatedItem=items.filter((item)=>item.id!==deleteditem.id)
+    setItems(updatedItem)
+
+  }
+
+  function handleUpdatedPrice(updatedItem){
+
+    const updatedItems=items.map((item)=>{
+      if(item.id===updatedItem.id)
+      {
+        return updatedItem;
+      }else
+      {
+        return item;
+      }
+    });
+    setItems(updatedItems)
+  }
+
+
+    function handleAddStatus(newstatus) {
+      setItems([...items,newstatus])
+  }
+
   return (
+
+
+
+
     <div>
-      <Plantform items={items}/>
+      <Plantform
+      items={items}
+      onDeleteItem={handleDeleteItem}
+      onUpdatedPrice={handleUpdatedPrice}
+      updatestatus={handleAddStatus}
+      />
     
     </div>
   )

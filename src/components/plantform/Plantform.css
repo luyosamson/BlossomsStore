@@ -44,7 +44,7 @@ td:nth-child(4) {
     /* Set the width of the fourth column to 30% */
 }
 
-/* td:nth-child(5) {
+td:nth-child(5) {
     width: 10%;
-    /* Set the width of the fifth column to 10% 
-} */
+    /* Set the width of the fifth column to 10% */
+}

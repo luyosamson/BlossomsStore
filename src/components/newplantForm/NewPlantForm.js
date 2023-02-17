@@ -11,6 +11,7 @@ function NewPlantForm({onAddPlant}) {
   const [price,setPrice]=useState("")
   const[description,setDescription]=useState("")
 
+
   const history=useNavigate();
 
 
@@ -21,7 +22,8 @@ function handleAddPlant(e){
       name:name,
       image:image,
       price:price,
-      description:description
+      description:description,
+
   };
 
   fetch("http://localhost:6001/plants",{
@@ -40,9 +42,11 @@ function productSubmit(){
   // onclick()
     
   history.push('/plantpage')
-
-
 }
+
+
+
+
 
   return (
     <div className="new-plant-form">
@@ -53,6 +57,7 @@ function productSubmit(){
       <label>Product Name</label><input type="text" name="name" placeholder="product name" onChange={(e)=>setName(e.target.value)} />
       <label>Price</label> <input type="number" name="price" step="0.01" placeholder="Price" onChange={(e)=>setPrice(e.target.value)}/>
       <label>Upload Image</label> <input type="text" name="image" placeholder="Upload image" onChange={(e)=>setImage(e.target.value)}/>
+
       <label>Description</label><textarea className="textarea" onChange={(e)=>setDescription(e.target.value)}></textarea>
       <p><button type="submit" onClick={productSubmit}>Submit</button></p>
       </form>
