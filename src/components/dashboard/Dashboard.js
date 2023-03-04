@@ -1,17 +1,10 @@
 import React from 'react'
 import './Dashboard.css'
 import { NavLink } from 'react-router-dom';
-import { Routes, Route } from "react-router-dom";
-import Sellerplants from '../sellerplants/Sellerplants';
-import Sellerflowers from '../sellerflowers/Sellerflowers'
-import NewPlantForm from '../newplantForm/NewPlantForm';
-import Dash from '../dash/Dash';
-
-
 
 function Dashboard() {
   return (
-    <div>
+    
         <div className='dashboard'>
           <div className='menu'>
             <NavLink exact to="/seller/dashboard">
@@ -36,7 +29,7 @@ function Dashboard() {
         </div>
         
 
-    </div>
+    
   )
 }
 

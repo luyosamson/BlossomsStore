@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { useNavigate } from "react-router-dom";
+import Dashboard from "../dashboard/Dashboard";
 import './Newplantform.css'
 
 
@@ -12,7 +12,7 @@ function NewPlantForm({onAddPlant}) {
   const[description,setDescription]=useState("")
 
 
-  const history=useNavigate();
+
 
 
 function handleAddPlant(e){
@@ -38,11 +38,7 @@ function handleAddPlant(e){
 
   
 }
-function productSubmit(){
-  // onclick()
-    
-  history.push('/plantpage')
-}
+
 
 
 
@@ -50,6 +46,7 @@ function productSubmit(){
 
   return (
     <div className="new-plant-form">
+      <Dashboard/>
       <h2>Sell your product by providing details through this form</h2>
       <div className="postProduct">
 
@@ -59,7 +56,7 @@ function productSubmit(){
       <label>Upload Image</label> <input type="text" name="image" placeholder="Upload image" onChange={(e)=>setImage(e.target.value)}/>
 
       <label>Description</label><textarea className="textarea" onChange={(e)=>setDescription(e.target.value)}></textarea>
-      <p><button type="submit" onClick={productSubmit}>Submit</button></p>
+      <p><button>Submit</button></p>
       </form>
 
       </div>

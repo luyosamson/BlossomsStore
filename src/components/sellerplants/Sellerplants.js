@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from 'react'
+import Dashboard from '../dashboard/Dashboard';
 import Plantform from '../plantform/Plantform';
-import { useHistory } from 'react-router-dom';
+import './Sellerplants.css'
+
 
 
 
@@ -50,12 +52,15 @@ function Sellerplants() {
   return (
 
     <div>
+      <Dashboard/>
+      <div className='items-container'>
       <Plantform
       items={items}
       onDeleteItem={handleDeleteItem}
       onUpdatedPrice={handleUpdatedPrice}
       updatestatus={handleAddStatus}
       />
+      </div>
      
     
     </div>

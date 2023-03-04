@@ -1,5 +1,6 @@
 
 import React,{useState,useEffect} from 'react'
+import Dashboard from '../dashboard/Dashboard';
 import Flowerform from '../flowerform/Flowerform';
 
 
@@ -45,11 +46,8 @@ function Sellerflowers() {
   }
 
   return (
-
-
-
-
     <div>
+      <Dashboard/>
       <Flowerform
       items={items}
       onDeleteItem={handleDeleteItem}
