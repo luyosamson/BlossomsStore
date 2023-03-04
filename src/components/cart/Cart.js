@@ -50,6 +50,7 @@ const Cart = ({ cart, setCart, handleChange }) => {
        
         <span>Ksh - {price}</span>
       </div>
+     
     </article>
   );
 };

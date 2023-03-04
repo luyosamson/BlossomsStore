@@ -5,8 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Sellerplants from '../sellerplants/Sellerplants';
 import Sellerflowers from '../sellerflowers/Sellerflowers'
 import NewPlantForm from '../newplantForm/NewPlantForm';
-
-
+import Dash from '../dash/Dash';
 
 
 
@@ -15,36 +14,25 @@ function Dashboard() {
     <div>
         <div className='dashboard'>
           <div className='menu'>
-            <NavLink to='/Sellerplants'>
+            <NavLink exact to="/seller/dashboard">
+              <h4>Dashboard</h4>
+            </NavLink>
+            <NavLink exact to='/seller/dashboard/Sellerplants'>
                 <h4>Plants</h4>
 
             </NavLink>
-            <NavLink to='/Sellerflowers'
+            <NavLink exact to='/seller/dashboard/Sellerflowers'
             >
                 <h4>Flowers</h4>
             </NavLink>
 
-            <NavLink to='/NewPlantForm'>
+            <NavLink exact to='/seller/dashboard/NewPlantForm'>
 
                 <h4>Post Product</h4>
 
             </NavLink>
            
-        </div>
-
-        <div className='products'>
-
-            <Routes>
-            <Route path='/Sellerplants' element={<Sellerplants />} />
-            <Route path='/Sellerflowers' element={<Sellerflowers />} />
-            <Route path='/NewPlantForm' element={<NewPlantForm />}/>
-         
-            </Routes>
-            
-           
-           
-        </div>
-       
+        </div>     
         </div>
         
 

@@ -6,7 +6,7 @@ function PlantCard({newItem,handleClick}) {
 
 
   return (
-    <div>
+   
   <li className='card'>
      <div>
        <img src={newItem.image} alt={newItem.name}/> 
@@ -19,7 +19,7 @@ function PlantCard({newItem,handleClick}) {
       </div>
       </div>
   </li>
-  </div>
+  
   
   );
 }

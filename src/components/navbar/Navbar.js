@@ -19,11 +19,7 @@ const linkstyle={
   
 }
 
-function Navbar({size}) {
-
-
-
-   
+function Navbar({size}) { 
   return (
     <div className="navbar">
         <NavLink 
@@ -47,9 +43,9 @@ function Navbar({size}) {
         </NavLink>
 
         <NavLink
-        to="/dashboard"
+         exact to="/seller/dashboard"
          style={linkstyle}>
-        Dashboard
+          Seller
         </NavLink>
 
         <NavLink

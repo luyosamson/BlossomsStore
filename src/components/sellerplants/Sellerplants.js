@@ -1,11 +1,16 @@
 import React,{useState,useEffect} from 'react'
 import Plantform from '../plantform/Plantform';
+import { useHistory } from 'react-router-dom';
+
 
 
 function Sellerplants() {
 
 
   const [items,setItems]=useState([])
+  // const history = useHistory();
+  // history.push('//dashboard/Sellerplants')
+
 
 
   useEffect(()=>{
@@ -44,9 +49,6 @@ function Sellerplants() {
 
   return (
 
-
-
-
     <div>
       <Plantform
       items={items}
@@ -54,8 +56,10 @@ function Sellerplants() {
       onUpdatedPrice={handleUpdatedPrice}
       updatestatus={handleAddStatus}
       />
+     
     
     </div>
+    
   )
 }
 

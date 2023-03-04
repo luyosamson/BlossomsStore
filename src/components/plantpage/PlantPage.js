@@ -16,9 +16,6 @@ useEffect(()=>{
   .then((items)=>setItems(items))
 },[])
 
-  // function handleAddPlant(added){
-  //     setItems([...items,added])
-  // }
 
 const lastPostindex=currentPage*postPerPage;
 const firstPostindex=lastPostindex-postPerPage;

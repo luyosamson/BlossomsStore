@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { Routes,Route } from "react-router-dom";
+import { Routes,Route, Router } from "react-router-dom";
 import Home from "./home/Home";
 import Flower from "./flower/Flower";
 import Plant from "./plants/Plant";
@@ -10,10 +10,12 @@ import Cart from "./cart/Cart";
 import Signup from "./signup/Signup";
 import Footer from "./footer/Footer";
 import PlantPage from "./plantpage/PlantPage";
-
+import Dashboard from "./dashboard/Dashboard";
 import Sellerflowers from './sellerflowers/Sellerflowers';
 import Sellerplants from './sellerplants/Sellerplants';
-import Dashboard from "./dashboard/Dashboard";
+import Dash from "./dash/Dash";
+import NewPlantForm from "./newplantForm/NewPlantForm";
+
 
 
 function App() {
@@ -41,21 +43,51 @@ function App() {
   return (
     <div>
     <Navbar size={cart.length}/>
+   
       <Routes>
-        <Route  path="/" element={<Home/>}  />
-        <Route  path="/flower" element={<Flower handleClick={handleClick}/>}
-          />
-        <Route  path="/plant" element={<Plant handleClick={handleClick}/>}  />
-        <Route  path="/dashboard" element={<Dashboard/>}  />
-        <Route  path="/signup" element={<Signup/>}  />
-        <Route  path="/search" element={<Search/>}  />
-        <Route  path="/cart" element={<Cart cart={cart} 
+        <Route  exact path="/"> 
+        <Home/> 
+        </Route>
+        <Route  exact path="/flower">
+          <Flower handleClick={handleClick}/>
+        </Route>
+          
+        <Route  exact path="/plant">
+          <Plant handleClick={handleClick}/>
+        </Route>
+        <Route  exact path="/seller">
+          <Seller/>
+        </Route>
+        <Route  exact path="/signup"> 
+        <Signup/>
+        </Route>
+        <Route  exact path="/search">
+          <Search/>
+        </Route>
+        <Route  exact path="/cart">
+        <Cart cart={cart} 
         setCart={setCart}
-        handleChange={handleChange}/>}
-          />
-        <Route  path="/plantpage" element={<PlantPage/>} />        
+        handleChange={handleChange}/>
+        </Route>
+        <Route  exact path="/plantpage">
+          <PlantPage/>
+        </Route>
+        <Route  exact path="/seller/dashboard"> 
+        <Dash/> 
+        </Route>
+        <Route exact path='/seller/dashboard/Sellerplants'> 
+        <Sellerplants />
+        </Route> 
+        <Route exact path='/seller/dashboard/Sellerflowers'>
+          <Sellerflowers />
+          </Route>
+        <Route exact path='/seller/dashboard/NewPlantForm'>
+          <NewPlantForm />
+          </Route> 
+
       </Routes>
-       <Dashboard/>
+      
+
        <Footer/>
       
 

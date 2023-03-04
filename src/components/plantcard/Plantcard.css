@@ -6,9 +6,9 @@
 .card{
   margin-left:50px;
 }
-.details{
+/* .details{
   display:flexbox;
-}
+} */
 .card button{
   width: 200px;
   height:30px;

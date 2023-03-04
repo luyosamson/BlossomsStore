@@ -15,6 +15,7 @@ function FeaturedCard({lists,handleClick}) {
       </div>
   </li>
 
+
     </div>
   )
 }
