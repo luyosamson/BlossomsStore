@@ -1,22 +1,13 @@
 {
   "plants": [
     {
-      "name": "Aloe Vera",
-      "image": "./images/aloe.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 35,
-      "amount": 1,
-      "inStock": true
-    },
-    {
       "name": "Aloe",
       "image": "./images/jade.jpg",
       "price": "456",
       "description": "This is aloe vera",
       "id": 36,
       "amount": 1,
-      "inStock": true
+      "inStock": false
     },
     {
       "name": "Lilly",
@@ -57,18 +48,9 @@
   ],
   "flowers": [
     {
-      "name": "Rose",
-      "image": "./images/jade.jpg",
-      "price": 45690,
-      "description": "This is aloe vera",
-      "id": 4,
-      "amount": 1,
-      "inStock": false
-    },
-    {
       "name": "Cactus",
       "image": "./images/aloe.jpg",
-      "price": "456",
+      "price": 456444,
       "description": "This is aloe vera",
       "id": 5,
       "amount": 1,
