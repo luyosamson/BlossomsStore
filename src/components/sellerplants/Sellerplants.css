@@ -1,17 +1,9 @@
-/* .items-container{
-    margin-left: 300px;
-    margin-top: 0px;
-  
-} */
+
 .container {
     display: flex;
     flex-direction: row;
 }
 
-/* .dashboard {
-    width: 40%;
-} */
-
 .items-container {
-    flex-grow: 1;
+    flex-grow:1;
 }
