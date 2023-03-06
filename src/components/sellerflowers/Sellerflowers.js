@@ -2,6 +2,7 @@
 import React,{useState,useEffect} from 'react'
 import Dashboard from '../dashboard/Dashboard';
 import Flowerform from '../flowerform/Flowerform';
+import './Sellerflowers.css'
 
 
 
@@ -46,15 +47,18 @@ function Sellerflowers() {
   }
 
   return (
-    <div>
+    <div className='container'>
+      <div className='dashboard'>
       <Dashboard/>
+      </div>
+       <div className="items-container">
       <Flowerform
       items={items}
       onDeleteItem={handleDeleteItem}
       onUpdatedPrice={handleUpdatedPrice}
       updatestatus={handleAddStatus}
       />
-    
+    </div>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Chart from "react-apexcharts";
 import Dashboard from '../dashboard/Dashboard';
+import './Dash.css'
 
 function Dash() {
     const [state,setState]=useState(
@@ -26,8 +27,11 @@ function Dash() {
     }
     )
   return (
-    <div>
+    <div className='container'>
+      <div className='dashboard'>
       <Dashboard/>
+      </div>
+      <div className='items-container'>
         <h2>Visualize Sales For The Last 7 Day</h2>
         <div className='row'>
 
@@ -40,6 +44,7 @@ function Dash() {
             />
             </div>
 
+        </div>
         </div>
     </div>
   )

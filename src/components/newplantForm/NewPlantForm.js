@@ -46,7 +46,10 @@ function handleAddPlant(e){
 
   return (
     <div className="new-plant-form">
+      <div className="dashboard">
       <Dashboard/>
+      </div>
+      <div className="items-container">
       <h2>Sell your product by providing details through this form</h2>
       <div className="postProduct">
 
@@ -59,6 +62,7 @@ function handleAddPlant(e){
       <p><button>Submit</button></p>
       </form>
 
+      </div>
       </div>
     </div>
   );

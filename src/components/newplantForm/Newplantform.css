@@ -56,3 +56,21 @@ input {
     transition: all 0.2s;
     width: 100%;
 }
+
+/* Dashboard based styling */
+.items-container {
+    flex-grow: 1;
+}
+
+.dashboard {
+    width: 40%;
+}
+
+.new-plant-form{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+

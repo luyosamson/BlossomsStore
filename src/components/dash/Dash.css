@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* .dashboard {
+    width: 25%;
+} */
+
+.items-container {
+    flex-grow: 1;
+}
