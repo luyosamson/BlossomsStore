@@ -1,27 +1,9 @@
 {
   "plants": [
     {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 36,
-      "amount": 1,
-      "inStock": false
-    },
-    {
-      "name": "Lilly",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 37,
-      "amount": 1,
-      "inStock": true
-    },
-    {
       "name": "Rose",
       "image": "./images/jade.jpg",
-      "price": "456",
+      "price": 4560000000000,
       "description": "This is aloe vera",
       "id": 38,
       "amount": 1,
@@ -47,41 +29,6 @@
     }
   ],
   "flowers": [
-    {
-      "name": "Cactus",
-      "image": "./images/aloe.jpg",
-      "price": 456444,
-      "description": "This is aloe vera",
-      "id": 5,
-      "amount": 1,
-      "inStock": false
-    },
-    {
-      "name": "Bougan",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 6,
-      "amount": 1,
-      "inStock": false
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 7,
-      "amount": 1,
-      "inStock": false
-    },
-    {
-      "name": "Aloe Vera",
-      "image": "./images/aloe.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 8,
-      "amount": 1
-    },
     {
       "name": "Aloe",
       "image": "./images/jade.jpg",
@@ -200,126 +147,6 @@
       "price": "456",
       "description": "This is aloe vera",
       "id": 23,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 24,
-      "amount": 1
-    },
-    {
-      "name": "Aloe Vera",
-      "image": "./images/aloe.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 25,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 26,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 27,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 28,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/aloe.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 29,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 30,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 31,
-      "amount": 1
-    },
-    {
-      "name": "Aloe Vera",
-      "image": "./images/aloe.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 32,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 33,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 34,
-      "amount": 1
-    },
-    {
-      "name": "Aloe Vera",
-      "image": "./images/aloe.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 35,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 36,
-      "amount": 1
-    },
-    {
-      "name": "Lilly",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 37,
-      "amount": 1
-    },
-    {
-      "name": "Rose",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 38,
       "amount": 1
     },
     {
