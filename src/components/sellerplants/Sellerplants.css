@@ -7,3 +7,7 @@
 .items-container {
     flex-grow:1;
 }
+.dashboard {
+    width: 20%;
+   
+}

@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-// import './Plantform.css'
+
 
 function Flowerdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
 

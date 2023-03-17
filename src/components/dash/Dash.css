@@ -3,9 +3,10 @@
     flex-direction: row;
 }
 
-/* .dashboard {
-    width: 25%;
-} */
+.dashboard {
+    width: 20%;
+    
+}
 
 .items-container {
     flex-grow: 1;
