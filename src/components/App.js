@@ -8,6 +8,7 @@ import Navbar from "./navbar/Navbar";
 import Search from "./search/Search";
 import Cart from "./cart/Cart";
 import Signup from "./signup/Signup";
+import Register from "./register/Register"
 import Footer from "./footer/Footer";
 import PlantPage from "./plantpage/PlantPage";
 import Sellerflowers from './sellerflowers/Sellerflowers';
@@ -17,11 +18,12 @@ import NewPlantForm from "./newplantForm/NewPlantForm";
 
 
 
+
 function App() {
 
     const [cart, setCart] = useState([]);
     const [items,setItems]=useState([])
-    
+
 
   function handleAddPlant(newPlant) {
     const updatedPlantsArray = [...items, newPlant];
@@ -55,7 +57,7 @@ function App() {
           />
         <Route  path="/plant" element={<Plant handleClick={handleClick}/>}  />
         <Route  path="/seller" element={<Seller/>}  />
-        <Route  path="/signup" element={<Signup/>}  />
+        {/* <Route  path="/signup" element={<Signup/>}  /> */}
         <Route  path="/search" element={<Search/>}  />
         <Route  path="/cart" element={<Cart cart={cart} 
         setCart={setCart}
@@ -68,7 +70,8 @@ function App() {
         <Route exact path='/seller/dashboard/Sellerplants' element={<Sellerplants />} />
         <Route exact path='/seller/dashboard/Sellerflowers' element={<Sellerflowers />} />
         <Route exact path='/seller/dashboard/NewPlantForm' element={<NewPlantForm onAddPlant={handleAddPlant} />}/>  
-
+        <Route exact path="/signup" element={<Signup/>} />
+         <Route path="/signup/register" element={<Register/>} />
       </Routes>
    
        <Footer/>
