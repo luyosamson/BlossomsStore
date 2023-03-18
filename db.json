@@ -26,6 +26,187 @@
       "id": 40,
       "amount": 1,
       "inStock": true
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/jade.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 10,
+      "amount": 1
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/jade.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 11,
+      "amount": 1
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/aloe.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 12,
+      "amount": 1
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/jade.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 13,
+      "amount": 1
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/jade.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 14,
+      "amount": 1
+    },
+    {
+      "name": "Aloe Vera",
+      "image": "./images/aloe.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 15,
+      "amount": 1
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/jade.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 16,
+      "amount": 1
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/jade.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 17,
+      "amount": 1
+    },
+    {
+      "name": "Aloe Vera",
+      "image": "./images/aloe.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 18,
+      "amount": 1
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/jade.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 19,
+      "amount": 1
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/jade.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 20,
+      "amount": 1
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/jade.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 21,
+      "amount": 1
+    },
+    {
+      "name": "Aloe",
+      "image": "./images/aloe.jpg",
+      "price": "456",
+      "description": "This is aloe vera",
+      "id": 22,
+      "amount": 1
+    },
+    {
+      "name": "Luyo Samson",
+      "image": "./images/zz-plant.jpg",
+      "price": "2344",
+      "description": "ssssss",
+      "id": 41
+    },
+    {
+      "name": "Luyo Samson",
+      "image": "./images/zz-plant.jpg",
+      "price": "333",
+      "description": "sss",
+      "id": 42
+    },
+    {
+      "name": "PORT",
+      "image": "./images/zz-plant.jpg",
+      "price": "4545",
+      "description": "This is a flower",
+      "id": 43
+    },
+    {
+      "name": "Samson  Omos",
+      "image": "./images/zz-plant.jpg",
+      "price": "9090",
+      "description": "This is nours",
+      "id": 44
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "description": "",
+      "id": 45
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "description": "",
+      "id": 46
+    },
+    {
+      "name": "Entertainment",
+      "image": "./images/zz-plant.jpg",
+      "price": "3434",
+      "description": "This yuuuuuss",
+      "id": 47
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "description": "",
+      "id": 48
+    },
+    {
+      "name": "Luyo Samson",
+      "image": "./images/zz-plant.jpg",
+      "price": "5566",
+      "description": "rrrr",
+      "id": 49
+    },
+    {
+      "name": "Kenya",
+      "image": "./images/zz-plant.jpg",
+      "price": "890",
+      "description": "This is great",
+      "id": 50
+    },
+    {
+      "name": "RoseRoseRose",
+      "image": "./images/zz-plant.jpg",
+      "price": "784566",
+      "description": "This is product",
+      "id": 51
     }
   ],
   "flowers": [
@@ -35,7 +216,8 @@
       "price": "456",
       "description": "This is aloe vera",
       "id": 9,
-      "amount": 1
+      "amount": 1,
+      "inStock": true
     },
     {
       "name": "Aloe",
@@ -43,7 +225,8 @@
       "price": "456",
       "description": "This is aloe vera",
       "id": 10,
-      "amount": 1
+      "amount": 1,
+      "inStock": true
     },
     {
       "name": "Aloe",
@@ -187,14 +370,6 @@
       "price": "456",
       "description": "This is aloe vera",
       "id": 43,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 44,
       "amount": 1
     },
     {
