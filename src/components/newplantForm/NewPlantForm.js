@@ -1,64 +1,154 @@
-import React,{useState} from "react";
-import Dashboard from "../dashboard/Dashboard";
-import './Newplantform.css'
+// import React,{useState} from "react";
+// import Dashboard from "../dashboard/Dashboard";
+// import './Newplantform.css'
 
 
 
 
-function NewPlantForm({onAddPlant}) {
-  const [name,setName]=useState("")
-  const [image,setImage]=useState("")
-  const [price,setPrice]=useState("")
-  const[description,setDescription]=useState("")
+// function NewPlantForm({onAddPlant}) {
+//   const [name,setName]=useState("")
+//   const [image,setImage]=useState("")
+//   const [price,setPrice]=useState("")
+//   const[description,setDescription]=useState("")
 
+// function handleAddPlant(e){
+//   e.preventDefault();
 
+//   const newItem = {
+//       name:name,
+//       image:image,
+//       price:price,
+//       description:description,
 
+//   };
 
-
-function handleAddPlant(e){
-  e.preventDefault();
-
-  const newItem = {
-      name:name,
-      image:image,
-      price:price,
-      description:description,
-
-  };
-
-  fetch("http://localhost:6001/plants",{
-    method:"POST",
-    headers:{
-      "Content-Type":"application/json"
-    },
-    body:JSON.stringify(newItem)
-  })
-  .then((r)=>r.json())
-  .then((item)=>{onAddPlant(item);
-e.target.reset();
+//   fetch("http://localhost:6001/plants",{
+//     method:"POST",
+//     headers:{
+//       "Content-Type":"application/json"
+//     },
+//     body:JSON.stringify(newItem)
+//   })
+//   .then((r)=>r.json())
+//   .then((item)=>{onAddPlant(item);
+// e.target.reset();
   
-  });  
-}
+//   });  
+// }
+
+//   return (
+//     <div className="new-plant-form">
+//       <div className="dashboard">
+//       <Dashboard/>
+//       </div>
+//       <div className="items-container">
+//       <h2>Sell your product by providing details through this form</h2>
+//       <div className="postProduct">
+
+//       <form className="addProduct" onSubmit={handleAddPlant}>
+//       <label>Product Name</label><input type="text" name="name" placeholder="product name" onChange={(e)=>setName(e.target.value)} />
+//       <label>Price</label> <input type="number" name="price" step="0.01" placeholder="Price" onChange={(e)=>setPrice(e.target.value)}/>
+//       <label>Upload Image</label> <input type="text" name="image" placeholder="Upload image" onChange={(e)=>setImage(e.target.value)}/>
+
+//       <label>Description</label><textarea className="textarea" onChange={(e)=>setDescription(e.target.value)}></textarea>
+//       <p><button>Submit</button></p>
+//       </form>
+
+//       </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default NewPlantForm;
+
+import React, { useState } from "react";
+import Dashboard from "../dashboard/Dashboard";
+import "./Newplantform.css";
+
+function NewPlantForm({ onAddPlant }) {
+  const [name, setName] = useState("");
+  const [image, setImage] = useState("");
+  const [price, setPrice] = useState("");
+  const [description, setDescription] = useState("");
+  const [category, setCategory] = useState("plants");
+
+  function handleAddPlant(e) {
+    e.preventDefault();
+
+    const newItem = {
+      name: name,
+      image: image,
+      price: price,
+      description: description
+    };
+
+    const endpoint =
+      category === "plants"
+        ? "http://localhost:6001/plants"
+        : "http://localhost:6001/flowers";
+
+    fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newItem)
+    })
+      .then((r) => r.json())
+      .then((item) => {
+        onAddPlant(item);
+        e.target.reset();
+      });
+  }
 
   return (
     <div className="new-plant-form">
       <div className="dashboard">
-      <Dashboard/>
+        <Dashboard />
       </div>
       <div className="items-container">
-      <h2>Sell your product by providing details through this form</h2>
-      <div className="postProduct">
+        <h2>Sell your product by providing details through this form</h2>
+        <div className="postProduct">
+          <form className="addProduct" onSubmit={handleAddPlant}>
+            <label>Category</label>
+            <select value={category} onChange={(e) => setCategory(e.target.value)}>
+              <option value="plants">Plants</option>
+              <option value="flowers">Flowers</option>
+            </select>
+            <label>Product Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="product name"
+              onChange={(e) => setName(e.target.value)}
+            />
+            <label>Price</label>{" "}
+            <input
+              type="number"
+              name="price"
+              step="0.01"
+              placeholder="Price"
+              onChange={(e) => setPrice(e.target.value)}
+            />
+            <label>Upload Image</label>{" "}
+            <input
+              type="text"
+              name="image"
+              placeholder="Upload image"
+              onChange={(e) => setImage(e.target.value)}
+            />
 
-      <form className="addProduct" onSubmit={handleAddPlant}>
-      <label>Product Name</label><input type="text" name="name" placeholder="product name" onChange={(e)=>setName(e.target.value)} />
-      <label>Price</label> <input type="number" name="price" step="0.01" placeholder="Price" onChange={(e)=>setPrice(e.target.value)}/>
-      <label>Upload Image</label> <input type="text" name="image" placeholder="Upload image" onChange={(e)=>setImage(e.target.value)}/>
-
-      <label>Description</label><textarea className="textarea" onChange={(e)=>setDescription(e.target.value)}></textarea>
-      <p><button>Submit</button></p>
-      </form>
-
-      </div>
+            <label>Description</label>
+            <textarea
+              className="textarea"
+              onChange={(e) => setDescription(e.target.value)}
+            ></textarea>
+            <p>
+              <button>Submit</button>
+            </p>
+          </form>
+        </div>
       </div>
     </div>
   );

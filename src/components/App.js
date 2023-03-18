@@ -21,14 +21,7 @@ function App() {
 
     const [cart, setCart] = useState([]);
     const [items,setItems]=useState([])
-
-
-  //     useEffect(()=>{
-  //   fetch("  http://localhost:6001/flowers")
-  //   .then((r)=>r.json())
-  //   .then((items)=>setItems(items));
-
-  // },[])
+    
 
   function handleAddPlant(newPlant) {
     const updatedPlantsArray = [...items, newPlant];
