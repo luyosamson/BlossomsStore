@@ -36,38 +36,6 @@
       "amount": 1
     },
     {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 11,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/aloe.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 12,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 13,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 14,
-      "amount": 1
-    },
-    {
       "name": "Aloe Vera",
       "image": "./images/aloe.jpg",
       "price": "456",
