@@ -207,6 +207,34 @@
       "price": "784566",
       "description": "This is product",
       "id": 51
+    },
+    {
+      "name": "Omondi",
+      "image": "./images/zz-plant.jpg",
+      "price": 89890,
+      "description": "yuyu",
+      "id": 52
+    },
+    {
+      "name": "sami",
+      "image": "./images/zz-plant.jpg",
+      "price": "56566565",
+      "description": "sdjjdhdgdgd",
+      "id": 56
+    },
+    {
+      "name": "Planty",
+      "image": "./images/zz-plant.jpg",
+      "price": "33333",
+      "description": "thisnis a test",
+      "id": 57
+    },
+    {
+      "name": "Planty2",
+      "image": "./images/zz-plant.jpg",
+      "price": "4566",
+      "description": "teeyeyeehdd",
+      "id": 58
     }
   ],
   "flowers": [
@@ -419,6 +447,34 @@
       "description": "This is aloe vera",
       "id": 50,
       "amount": 1
+    },
+    {
+      "name": "PlantTest",
+      "image": "./images/zz-plant.jpg",
+      "price": "1234",
+      "description": "rrrrrrrrrrrrrrr",
+      "id": 51
+    },
+    {
+      "name": "Flowers",
+      "image": "./images/zz-plant.jpg",
+      "price": "123455",
+      "description": "ssssssssssss",
+      "id": 52
+    },
+    {
+      "name": "Flower1",
+      "image": "./images/zz-plant.jpg",
+      "price": "3344",
+      "description": "dgdggdgdgd",
+      "id": 53
+    },
+    {
+      "name": "Flowers788",
+      "image": "./images/zz-plant.jpg",
+      "price": "23333",
+      "description": "xggsgsgsgggsgsggsgs",
+      "id": 54
     }
   ],
   "featured": [
