@@ -20,6 +20,20 @@ import NewPlantForm from "./newplantForm/NewPlantForm";
 function App() {
 
     const [cart, setCart] = useState([]);
+    const [items,setItems]=useState([])
+
+
+  //     useEffect(()=>{
+  //   fetch("  http://localhost:6001/flowers")
+  //   .then((r)=>r.json())
+  //   .then((items)=>setItems(items));
+
+  // },[])
+
+  function handleAddPlant(newPlant) {
+    const updatedPlantsArray = [...items, newPlant];
+    setItems(updatedPlantsArray);
+  }
 
   const handleClick = (item) => {
     if (cart.indexOf(item) !== -1) return;
@@ -60,7 +74,7 @@ function App() {
         <Route  exact path="/seller/dashboard" element={<Dash/>}/>
         <Route exact path='/seller/dashboard/Sellerplants' element={<Sellerplants />} />
         <Route exact path='/seller/dashboard/Sellerflowers' element={<Sellerflowers />} />
-        <Route exact path='/seller/dashboard/NewPlantForm' element={<NewPlantForm />}/>  
+        <Route exact path='/seller/dashboard/NewPlantForm' element={<NewPlantForm onAddPlant={handleAddPlant} />}/>  
 
       </Routes>
    

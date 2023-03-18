@@ -4,7 +4,7 @@ import Dashboard from '../dashboard/Dashboard';
 import './Dash.css'
 
 function Dash() {
-    const [state,setState]=useState(
+    const [state]=useState(
         {
       options: {
         chart: {

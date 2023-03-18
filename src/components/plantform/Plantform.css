@@ -1,10 +1,11 @@
 table {
-    width: 50%;
+    width: 70%;
     /* Set the table width to 100% */
     border-collapse: collapse;
     /* Remove the space between cells */
 
 }
+
 
 th,
 td {

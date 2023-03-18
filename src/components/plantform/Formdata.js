@@ -19,8 +19,9 @@ function Formdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
     .then((r)=>r.json())
     .then(()=>onDeleteItem(newItem))
 
+}
 
-  }
+
 
   function handleUpdatePrice(){
 

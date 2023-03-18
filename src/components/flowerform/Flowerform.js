@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import Flowerdata from './Flowerdata';
 import './Flowerform.css';
 
 function Flowerform({ items, onDeleteItem, onUpdatedPrice, updatestatus }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize] = useState(5);
+  const [pageSize] = useState(6);
 
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
@@ -17,6 +16,8 @@ function Flowerform({ items, onDeleteItem, onUpdatedPrice, updatestatus }) {
   function handlePageChange(page) {
     setCurrentPage(page);
   }
+
+
 
   return (
     <div>

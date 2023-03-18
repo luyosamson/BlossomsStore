@@ -34,15 +34,11 @@ function handleAddPlant(e){
     body:JSON.stringify(newItem)
   })
   .then((r)=>r.json())
-  .then((item)=>onAddPlant(item))
-
+  .then((item)=>{onAddPlant(item);
+e.target.reset();
   
+  });  
 }
-
-
-
-
-
 
   return (
     <div className="new-plant-form">
