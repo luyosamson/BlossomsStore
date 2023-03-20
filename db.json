@@ -194,6 +194,14 @@
       "price": "4566",
       "description": "teeyeyeehdd",
       "id": 58
+    },
+    {
+      "name": "Luyo Samson",
+      "image": "./images/zz-plant.jpg",
+      "price": "23444",
+      "description": "eeeeeeeeee",
+      "type": "Indoor plants",
+      "id": 59
     }
   ],
   "flowers": [
@@ -410,6 +418,14 @@
       "price": "23333",
       "description": "xggsgsgsgggsgsggsgs",
       "id": 54
+    },
+    {
+      "name": "Rozy",
+      "image": "./images/zz-plant.jpg",
+      "price": "345345",
+      "description": "I love This Flower",
+      "type": "Romantic flowers",
+      "id": 55
     }
   ],
   "featured": [
