@@ -211,15 +211,6 @@
       "image": "./images/jade.jpg",
       "price": "456",
       "description": "This is aloe vera",
-      "id": 9,
-      "amount": 1,
-      "inStock": true
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
       "id": 10,
       "amount": 1,
       "inStock": true
@@ -477,6 +468,57 @@
       "description": "This is aloe vera",
       "id": 46,
       "amount": 1
+    }
+  ],
+  "users": [
+    {
+      "username": "luyosamson@gmail.com",
+      "password": "333333",
+      "id": 1
+    }
+  ],
+  "newUser": [
+    {
+      "fullName": "eeee",
+      "email": "luyosamson@gmail.com",
+      "username": "sssss",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "fullName": "eee",
+      "email": "sss@ddd",
+      "username": "dddd",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "fullName": "eeeee",
+      "email": "luyosams@ddhddh",
+      "username": "444444",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "fullName": "tettete",
+      "email": "sddgdgg@ddgd",
+      "username": "xxxxx",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "fullName": "zzz",
+      "email": "wwww@ssss",
+      "username": "xxxx",
+      "password": "1234",
+      "id": 5
+    },
+    {
+      "fullName": "sss",
+      "email": "ssss@ddd",
+      "username": "ssssss",
+      "password": "1234",
+      "id": 6
     }
   ]
 }
