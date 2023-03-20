@@ -8,6 +8,7 @@ function NewPlantForm({ onAddPlant }) {
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("plants");
+  const [type, setType] = useState("");
 
   function handleAddPlant(e) {
     e.preventDefault();
@@ -16,7 +17,8 @@ function NewPlantForm({ onAddPlant }) {
       name: name,
       image: image,
       price: price,
-      description: description
+      description: description,
+      type: type
     };
 
     const endpoint =
@@ -38,6 +40,10 @@ function NewPlantForm({ onAddPlant }) {
       });
   }
 
+  const flowerTypes = ["Love flowers", "Gift flowers", "Birthday flowers", "Romantic flowers"];
+  const plantTypes = ["Indoor plants", "Succulent plant", "Herbs", "Bonsai", "Gift plants"];
+  const types = category === "plants" ? plantTypes : flowerTypes;
+
   return (
     <div className="new-plant-form">
       <div className="dashboard">
@@ -51,6 +57,15 @@ function NewPlantForm({ onAddPlant }) {
             <select value={category} onChange={(e) => setCategory(e.target.value)}>
               <option value="plants">Plants</option>
               <option value="flowers">Flowers</option>
+            </select>
+            <label>Type</label>
+            <select value={type} onChange={(e) => setType(e.target.value)}>
+              <option value="">Select a type</option>
+              {types.map((t) => (
+                <option key={t} value={t}>
+                  {t}
+                </option>
+              ))}
             </select>
             <label>Product Name</label>
             <input
