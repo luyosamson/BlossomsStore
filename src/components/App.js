@@ -23,11 +23,17 @@ function App() {
 
     const [cart, setCart] = useState([]);
     const [items,setItems]=useState([])
+    const [user,setUser]=useState([])
 
 
   function handleAddPlant(newPlant) {
     const updatedPlantsArray = [...items, newPlant];
     setItems(updatedPlantsArray);
+  }
+
+    function handleAddUser(newUser) {
+    const updatedUserArray = [...user, newUser];
+    setUser(updatedUserArray);
   }
 
   const handleClick = (item) => {
@@ -70,7 +76,7 @@ function App() {
         <Route exact path='/seller/dashboard/Sellerplants' element={<Sellerplants />} />
         <Route exact path='/seller/dashboard/Sellerflowers' element={<Sellerflowers />} />
         <Route exact path='/seller/dashboard/NewPlantForm' element={<NewPlantForm onAddPlant={handleAddPlant} />}/>  
-        <Route exact path="/signup" element={<Signup/>} />
+        <Route exact path="/signup" element={<Signup onAddUser={handleAddUser}/>} />
          <Route path="/signup/register" element={<Register/>} />
       </Routes>
    
