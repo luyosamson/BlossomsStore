@@ -1,10 +1,12 @@
 import React from 'react'
 import FlowerPage from '../flowerpage/FlowerPage'
+import Search from '../search/Search'
 import './Flower.css'
 
 function Flower({handleClick}) {
   return (
-    <div className='flower'>
+    <div className='flowers'>
+      <div className='flowers-headers'>
       Filter By<select>
         <option>All</option>
         <optgroup label='By Occasion'>
@@ -24,6 +26,8 @@ function Flower({handleClick}) {
 
             </optgroup>
       </select>
+       <Search/>
+       </div>
     <FlowerPage handleClick={handleClick}/>
     </div>
   )
