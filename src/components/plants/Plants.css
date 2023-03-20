@@ -1,4 +1,12 @@
-.plant{
-    width: 100%;
+.plants{
     height: 100%;
+    width: 100%;
+}
+.plants-header {
+    display: flex;
+    align-items: center;
+}
+
+.plants-header label {
+    margin-right: 1rem;
 }
