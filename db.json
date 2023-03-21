@@ -202,6 +202,22 @@
       "description": "eeeeeeeeee",
       "type": "Indoor plants",
       "id": 59
+    },
+    {
+      "name": "Succulent",
+      "image": "./images/zz-plant.jpg",
+      "price": "123",
+      "description": "Succulent Plants",
+      "type": "Succulent Plants",
+      "id": 60
+    },
+    {
+      "name": "Succulent Plant",
+      "image": "./images/zz-plant.jpg",
+      "price": "6777",
+      "description": "Succulent Plants",
+      "type": "Succulent Plants",
+      "id": 61
     }
   ],
   "flowers": [
@@ -426,6 +442,38 @@
       "description": "I love This Flower",
       "type": "Romantic flowers",
       "id": 55
+    },
+    {
+      "name": "New Baby",
+      "image": "./images/zz-plant.jpg",
+      "price": "123123",
+      "description": "New Baby flower",
+      "type": "New baby Flowers",
+      "id": 56
+    },
+    {
+      "name": "Romamnsi",
+      "image": "./images/zz-plant.jpg",
+      "price": "345",
+      "description": "The romantic flower",
+      "type": "Romantic Flowers",
+      "id": 57
+    },
+    {
+      "name": "Luyo Samson",
+      "image": "./images/zz-plant.jpg",
+      "price": "444",
+      "description": "ddddd",
+      "type": "Romantic Flowers",
+      "id": 58
+    },
+    {
+      "name": "Luyo Samson",
+      "image": "./images/zz-plant.jpg",
+      "price": "33333",
+      "description": "dddddddd",
+      "type": "Romantic Flowers",
+      "id": 59
     }
   ],
   "featured": [

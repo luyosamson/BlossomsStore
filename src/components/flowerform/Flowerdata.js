@@ -62,6 +62,7 @@ function Flowerdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
         <tr>
             <td>{newItem.id}</td>
             <td>{newItem.name}</td>
+            <td>{newItem.type}</td>
             <td>{newItem.price}</td>
 
             <td>

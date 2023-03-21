@@ -1,18 +1,44 @@
-.iconss {
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-left: 30%;
-    padding: 20px;
+    height: 20%;
+    background-color:wheat;
+}
+
+.iconss {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconss>* {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 2rem;
+}
+
+.iconss>*>svg {
+    margin-bottom: 1rem;
 }
 
 .moto {
-
+    margin-top: 2rem;
     text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    color:green;
+    font-weight: bold;
 }
-.welcomeNote {
-    text-align: center;
-}
-.welcome {
-    background-color: aliceblue;
-    height: 250px;
+.welcomeNote p{
+    font-weight: bold;
 
+}
+.iconss text{
+    color:green;
 }

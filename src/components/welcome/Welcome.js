@@ -9,14 +9,14 @@ function Welcome() {
     <div className='welcome'>
       <div className='welcomeNote'>
       <h2>Welcome Here</h2>
-      <p>This is the best Platform for purchasing high quality flowers at <br/>
+      <p>This is the best Platform for purchasing high <br/> quality  flowers ans plants at 
       an affordable rate
       </p>
       </div>
       <div className='iconss'>
-      <AiFillCar size="4rem" color='purple'/> Free Shipping
-      <FaThumbsUp size="4rem" color='purple'/> Transactional Save 
-      <AiFillClockCircle size="4rem" color='purple'/> Support Online 24/7
+      <AiFillCar size="4rem" color='green'/> Free Shipping
+      <FaThumbsUp size="4rem" color='green'/> Transactional Save 
+      <AiFillClockCircle size="4rem" color='green'/> Online Support 24/7
 
       </div>
 <p className='moto'>We Deliver at Your Convinience</p>

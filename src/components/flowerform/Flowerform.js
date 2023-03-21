@@ -4,7 +4,7 @@ import './Flowerform.css';
 
 function Flowerform({ items, onDeleteItem, onUpdatedPrice, updatestatus }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize] = useState(6);
+  const [pageSize] = useState(5);
 
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
@@ -26,6 +26,7 @@ function Flowerform({ items, onDeleteItem, onUpdatedPrice, updatestatus }) {
           <tr>
             <th>S/N</th>
             <th>Name</th>
+             <th>Type</th>
             <th>Price</th>
             <th>Status</th>
             <th>Delete</th>

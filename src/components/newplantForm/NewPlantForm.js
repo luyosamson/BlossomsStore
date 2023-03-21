@@ -40,8 +40,12 @@ function NewPlantForm({ onAddPlant }) {
       });
   }
 
-  const flowerTypes = ["Love flowers", "Gift flowers", "Birthday flowers", "Romantic flowers"];
-  const plantTypes = ["Indoor plants", "Succulent plant", "Herbs", "Bonsai", "Gift plants"];
+  const flowerTypes = ["Thank You Flowers", "Celebration Flowers",
+                      "Sympathy flowers","Birthday Flowers", "Romantic Flowers","I'm sorry Flowers",
+                      "New baby Flowers"];
+  const plantTypes = ["Indoor plants", "Succulent Plants","Bonsai", "Tropical Plants",
+                     "Floor Plants","Outdoor Plants","Indoor Plants","Flowering Plants",
+                     "House Plants","Hanging Plants"];
   const types = category === "plants" ? plantTypes : flowerTypes;
 
   return (

@@ -1,5 +1,5 @@
 table {
-    width: 70%;
+    width: 80%;
     /* Set the table width to 100% */
     border-collapse: collapse;
     /* Remove the space between cells */
@@ -46,6 +46,10 @@ td:nth-child(4) {
 }
 
 td:nth-child(5) {
+    width: 10%;
+    /* Set the width of the fifth column to 10% */
+}
+td:nth-child(6) {
     width: 10%;
     /* Set the width of the fifth column to 10% */
 }

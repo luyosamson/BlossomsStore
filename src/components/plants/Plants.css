@@ -1,12 +1,5 @@
 .plants{
-    height: 100%;
     width: 100%;
-}
-.plants-header {
-    display: flex;
-    align-items: center;
+    height: 100%;
 }
 
-.plants-header label {
-    margin-right: 1rem;
-}

@@ -9,6 +9,7 @@ function PlantPage({handleClick}) {
   const [currentPage,setCurrentPage]=useState(1)
   const [postPerPage,setPostperpage]=useState(8)
    const [searchTerm, setSearchTerm] = useState("");
+   const [selectedOption, setSelectedOption] = useState('All');
   
 
   
@@ -23,13 +24,23 @@ useEffect(()=>{
     setSearchTerm(value);
   };
 
+    const handleFilterChange = (e) => {
+    setSelectedOption(e.target.value);
+  };
+
 
 const lastPostindex=currentPage*postPerPage;
 const firstPostindex=lastPostindex-postPerPage;
 
- const filteredList = items.filter((item) =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+   const filteredList = items.filter((item) => {
+    if (selectedOption === 'All') {
+      return true;
+    } else {
+      return item.type === selectedOption;
+    }
+  }).filter((item) => {
+    return item.name.toLowerCase().includes(searchTerm.toLowerCase());
+  });
 
 const currentPosts=filteredList.slice(firstPostindex,lastPostindex);
 
@@ -38,29 +49,25 @@ const currentPosts=filteredList.slice(firstPostindex,lastPostindex);
     <div>
 
       <div className='plants-header'>
-        <label>Filter By:</label>
-        <select>
-          <option>All</option>
-          <optgroup label='Type'>
-            <option>Succulent Plants</option>
-            <option>Floor Plants</option>
-            <option>Outdoor Plants</option>
-            <option>Bonsai</option>
-            <option>Flowering Plants</option>
-            <option>Herbs</option>
-            <option>Tree Plants</option>
-            <option>Gift Plants</option>
-          </optgroup>
+        Filter By:
+        <select value={selectedOption} onChange={handleFilterChange}>
+          <option value="all">All</option>
+            <option value="Succulent Plants">Succulent Plants</option>
+            <option value="Tropical Plants">Tropical Plants</option>
+            <option value="Floor Plants">Floor Plants</option>
+            <option value="Outdoor Plants">Outdoor Plants</option>
+            <option value="Indoor Plants">Indoor Plants</option>
+            <option value="Bonsai">Bonsai</option>
+            <option value="Flowering Plants">Flowering Plants</option>
+            <option value="House Plants">House Plants</option>
+            <option value="Hanging Plants">Hanging Plants</option>
         </select>
-         <Search onSearch={searchTerm} 
-        onChangeSearch={handleChange}
-         />
+         <Search onSearch={searchTerm}  onChangeSearch={handleChange}/>
       </div>
-  <PlantList items={currentPosts}
-  handleClick={handleClick}/>  
+  <PlantList  key={items.id} items={currentPosts} handleClick={handleClick}/>  
 
       <Pagination 
-        totalPosts={items.length}
+        totalPosts={filteredList.length}
         postPerPage={postPerPage}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}

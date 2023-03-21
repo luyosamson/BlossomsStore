@@ -1,10 +1,12 @@
 .postProduct {
     position: relative;
-    top: 5%;
-    left: 40%;
+    top: 2%;
+    left: 35%;
     width: 400px;
-    height: 500px;
-    background-color: aqua;
+    height: 550px;
+    background-color:darkseagreen;
+
+    border-radius: 5px;
 
 }
 
@@ -26,9 +28,10 @@
 
 }
 
-.textarea {
+.addProduct .textarea {
     height: 100px;
     padding-left: 20px;
+    margin-left: 100px;
 
 }
 
@@ -45,6 +48,7 @@
 form label {
     font-weight: bold;
     display: block;
+   
 }
 
 input {
@@ -57,7 +61,7 @@ input {
     width: 100%;
 }
 
-/* Dashboard based styling */
+
 .items-container {
     flex-grow: 1;
 }
@@ -73,5 +77,11 @@ input {
 
 }
 
-
+.addProduct select{
+    margin-left: 150px;
+    font-weight: bold;
+    width:150;
+    height:30px;
+    border-radius: 5px;
+}
 

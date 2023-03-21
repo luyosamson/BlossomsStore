@@ -1,6 +1,5 @@
 import React from 'react'
-import Myasset2 from '../../assets/hero1.jpg'
-import Myasset3 from '../../assets/hero3.png'
+import Myasset3 from '../../assets/NewHero.png'
 
 import './Hero.css'
 
@@ -9,18 +8,17 @@ function Hero() {
   return (
     <div>
     <div className='herocard'>
+       <img src={Myasset3} alt='Heroimage'/> 
+       <h3>A Smarter Way To Buy,Sell And Discover The Magic Of Flowers And Plants</h3>
        
-      
-       <img src={Myasset3} alt='Heroimage'/>
-         <img src={Myasset2} alt='Heroimage'/>
-       
-       
+          
     </div>
-    <button className='heroButton'>Explore More</button>
+     
+
+   
     </div>
   )
 }
 
 export default Hero
-
 
