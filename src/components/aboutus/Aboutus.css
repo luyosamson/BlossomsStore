@@ -1,0 +1,28 @@
+ .about-container {
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+    background-color:antiquewhite;
+}
+
+.about-title {
+    color: green;
+    margin-right: 20px;
+    flex: 1;
+    font-size: 300%;
+}
+
+.aboutus {
+    flex: 2;
+    text-align: left;
+}
+.aboutus h4{
+    font-size: 100%;
+    color: grey;
+}
+.aboutus h2 {
+    font-size: 300%;
+    color: grey;
+} 
+
+ 
