@@ -1,12 +1,9 @@
 import React from 'react'
 import './Reviewspage.css'
-// import Rev1 from '../../reviews/rev1.jpeg'
-import Rev2 from '../../reviews/rev2.jpg'
-import Rev3 from '../../reviews/rev3.jpeg'
-// import Rev4 from '../../reviews/rev4.jpeg'
-// import Rev5 from '../../reviews/rev5.jpeg'
-// import Rev6 from '../../reviews/rev6.jpeg'
-import Rev7 from '../../reviews/rev7.jpeg'
+import Rev2 from '../../reviews/Display1.jpg'
+import Rev3 from '../../reviews/Display3.jpg'
+import Rev7 from '../../reviews/Display4.jpg'
+import Rev8 from '../../reviews/monstera.jpg'
 
 
 function ReviewsPage() {
@@ -15,26 +12,26 @@ const reviews=[
   {
     id:1,
     src:Rev7,
-    name:"Luyo Samson",
-    title:"Great product, greater service",
-    review:"Flowers were fresh and in pristine condition. Delivery was quick. I recommend Purpink any day, any time!"
-
+    name:"New Baby Flowers",
+    
   },
     {
     id:2,
     src:Rev2,
-    name:"Mary K.",
-    title:"Premium products, premium services",
-    review:"The ordering process was so efficient and I received constant updates on my order, this was especially important to me as I"
-
+    name:"Valentine Flowers",
+    
 
   },
     {
     id:3,
     src:Rev3,
-    name:"Elizabeth V.",
-    title:"The most beautiful bouquet!",
-    review:"I enjoyed every step of the process that went into ordering these flowers.Customer service was great"
+    name:"Thank You Flowers",
+  
+  },
+      {
+    id:4,
+    src:Rev8,
+    name:"Indoor Plants"
 
   }
 ]
@@ -42,22 +39,22 @@ const reviews=[
 
   return (
     <div className='reviewPage'>
-      <div className='reviewCard'>
-        {
-         
-          reviews.map(({id,name,title,review})=>(
-            <div key={id} className="card">
+       <h2>Our Products meet various occasions and situations!</h2>
+  <div className='reviewCard'>
+   
+    {
+      reviews.map(({id,src,name})=>(
+        <div key={id} className="card">
+          <div className="image-container">
+            <img src={src} alt="display" />
             <h4>{name}</h4>
-            <h3>{title}</h3>
-            <p>"{review}"</p>
-
-
           </div>
-          ))      
-        }
-           
-      </div>
-    </div>
+        </div>
+      ))      
+    }     
+  </div>
+</div>
+
   )
 }
 

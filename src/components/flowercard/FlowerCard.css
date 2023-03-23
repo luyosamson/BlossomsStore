@@ -1,0 +1,27 @@
+.card {
+    width: 100%;
+    height: 500px;
+  
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 10%;
+    border-radius: 5px;
+
+}
+
+
+
+.card div {
+    display: flexbox;
+    margin-left: 5%;
+}
+
+.card div button {
+    width: 200px;
+    height: 30px;
+}

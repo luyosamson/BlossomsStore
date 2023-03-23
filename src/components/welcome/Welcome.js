@@ -9,7 +9,7 @@ function Welcome() {
     <div className='welcome'>
       <div className='welcomeNote'>
       <h2>Welcome Here</h2>
-      <p>This is the best Platform for purchasing high <br/> quality  flowers ans plants at 
+      <p>This is the best Platform for purchasing high <br/> quality  flowers and plants at 
       an affordable rate
       </p>
       </div>

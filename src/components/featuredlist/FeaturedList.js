@@ -5,6 +5,7 @@ import './FeaturedList.css'
 function FeaturedList({listitem}) {
   return (
     <div>
+      <h3>Featured Products</h3>
         <ul className='featuredList'>
          {
             listitem.map((lists)=>(
@@ -14,11 +15,8 @@ function FeaturedList({listitem}) {
                  />
             ))
          }
-
+         
         </ul>
-
-
-
     </div>
   )
 }

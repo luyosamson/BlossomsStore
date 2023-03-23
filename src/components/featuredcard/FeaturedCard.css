@@ -1,17 +1,29 @@
-.Featuredcard img {
-    width: 300px;
-    height: 300px;
+.Featuredcard{
+    width: 100%;
+    height: 500px;
+ 
+    
+    
+}
+.Featuredcard img{
+    width: 100%;
+    height: 400px;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 10%;
+    border-radius: 5px;
+   
 }
 
-.Featuredcard {
-    margin-left: 50px;
-}
 
-.details {
+
+.Featuredcard div {
     display: flexbox;
+    margin-left: 5%;
 }
 
-.Featuredcard button {
+.Featuredcard div button {
     width: 200px;
     height: 30px;
 }
+

@@ -12,7 +12,7 @@ function FlowerList({list,handleClick}) {
     <div>
     <ul className='flowerList'>
         {
-            list?.map(newList=>(
+            list.map(newList=>(
                 <FlowerCard
                 key={newList.id}
                 newList={newList}

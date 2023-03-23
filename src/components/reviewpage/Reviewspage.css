@@ -1,80 +1,57 @@
-/* 
+.reviewPage{
+    background-color: antiquewhite;
 
-.reviewCard{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    
 }
-
-.reviewCard img {
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-
-
-.slides {
-    display: flex;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    animation: slide 20s infinite;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slide.active {
-    animation:forwards;
-} */
- 
-
-.reviewCard {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    margin: 0 1rem;
-}
-
-.clientImage {
-    width: 100%;
-    height: auto;
-}
-
-h4 {
-    font-size: 1.2rem;
-    margin: 1rem 0 0.5rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.reviewCard p {
-    font-size: 1rem;
-    text-align: center;
+.reviewPage h2{
+    color:black;
     font-style: italic;
-   
+  
 }
+  .reviewCard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+     
+      
+  }
+
+  .reviewCard .card {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+  }
+
+  .image-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease;
+      z-index: 1;
+  }
+
+  .image-container:hover {
+      transform: scale(1.1);
+  }
+
+  .image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+  }
+
+  .image-container h4 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      z-index: 2;
+      color:darkgreen;      
+      font-size: larger;
+  }
