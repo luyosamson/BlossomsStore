@@ -1,40 +1,6 @@
 {
   "plants": [
     {
-      "name": "Cactus",
-      "image": "./images/aloe.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 39,
-      "amount": 1,
-      "inStock": true
-    },
-    {
-      "name": "Bougan",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 40,
-      "amount": 1,
-      "inStock": true
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 10,
-      "amount": 1
-    },
-    {
-      "name": "Aloe Vera",
-      "image": "./images/aloe.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 15,
-      "amount": 1
-    },
-    {
       "name": "Aloe",
       "image": "./images/jade.jpg",
       "price": "456",
@@ -182,20 +148,6 @@
       "id": 56
     },
     {
-      "name": "Planty",
-      "image": "./images/zz-plant.jpg",
-      "price": "33333",
-      "description": "thisnis a test",
-      "id": 57
-    },
-    {
-      "name": "Planty2",
-      "image": "./images/zz-plant.jpg",
-      "price": "4566",
-      "description": "teeyeyeehdd",
-      "id": 58
-    },
-    {
       "name": "Luyo Samson",
       "image": "./images/zz-plant.jpg",
       "price": "23444",
@@ -221,15 +173,6 @@
     }
   ],
   "flowers": [
-    {
-      "name": "Aloe Vera",
-      "image": "./images/jade.jpg",
-      "price": 9000,
-      "description": "This is aloe vera",
-      "id": 10,
-      "amount": 1,
-      "inStock": false
-    },
     {
       "name": "Aloe",
       "image": "./images/jade.jpg",
