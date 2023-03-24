@@ -51,7 +51,7 @@ const currentPosts=filteredList.slice(firstPostindex,lastPostindex);
       <div className='plants-header'>
         Filter By:
         <select value={selectedOption} onChange={handleFilterChange}>
-          <option value="all">All</option>
+          <option value="All">All</option>
             <option value="Succulent Plants">Succulent Plants</option>
             <option value="Tropical Plants">Tropical Plants</option>
             <option value="Floor Plants">Floor Plants</option>
