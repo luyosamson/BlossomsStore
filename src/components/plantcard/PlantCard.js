@@ -10,8 +10,8 @@ function PlantCard({newItem,handleClick}) {
   <li className='card'>
      <div>
        <img src={newItem.image} alt={newItem.name}/> 
-       <div className='details'>
-      <p>{newItem.name}</p>
+       <div>
+      <p className='itemName'>{newItem.name}</p>
       <p>Ksh.{newItem.price}</p>
      <p ><span className='status'>{JSON.stringify(newItem.inStock?"Instock":"SoldOut")}</span></p>
           
