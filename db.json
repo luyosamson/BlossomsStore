@@ -1,22 +1,6 @@
 {
   "plants": [
     {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 16,
-      "amount": 1
-    },
-    {
-      "name": "Aloe",
-      "image": "./images/jade.jpg",
-      "price": "456",
-      "description": "This is aloe vera",
-      "id": 17,
-      "amount": 1
-    },
-    {
       "name": "Aloe Vera",
       "image": "./images/aloe.jpg",
       "price": "456",
@@ -170,6 +154,14 @@
       "description": "Succulent Plants",
       "type": "Succulent Plants",
       "id": 61
+    },
+    {
+      "name": "Floor",
+      "image": "./images/aloe.jpg",
+      "price": "3434",
+      "description": "This is a floor plant",
+      "type": "Floor Plants",
+      "id": 62
     }
   ],
   "flowers": [
@@ -417,6 +409,30 @@
       "description": "dddddddd",
       "type": "Romantic Flowers",
       "id": 59
+    },
+    {
+      "name": "Sorry",
+      "image": "./images/aloe.jpg",
+      "price": "3456",
+      "description": "fffss",
+      "type": "I'm sorry Flowers",
+      "id": 60
+    },
+    {
+      "name": "LUYO OMONDI",
+      "image": "./images/aloe.jpg",
+      "price": "333",
+      "description": "ttststtstss",
+      "type": "Thank You Flowers",
+      "id": 61
+    },
+    {
+      "name": "sam omondi luyo",
+      "image": "./images/aloe.jpg",
+      "price": "7878",
+      "description": "sxhhxhhxhx",
+      "type": "Thank You Flowers",
+      "id": 62
     }
   ],
   "featured": [
