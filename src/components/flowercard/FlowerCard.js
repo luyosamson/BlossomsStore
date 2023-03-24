@@ -11,7 +11,7 @@ function FlowerCard({newList,handleClick}) {
       <p className='itemName'>{newList.name}</p>
       <p>Ksh.{newList.price}</p>
         <p ><span className='status'>{JSON.stringify(newList.inStock?"InStock":"SoldOut")}</span></p>
-      <button onClick={()=>handleClick(newList)}>Add to Cart</button>
+      <button onClick={()=>handleClick(newList)}>ADD TO CART</button>
       
       </div>
   </li>
