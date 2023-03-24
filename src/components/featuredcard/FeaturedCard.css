@@ -1,29 +1,31 @@
-.Featuredcard{
+
+.Featuredcard {
     width: 100%;
-    height: 500px;
- 
-    
-    
-}
-.Featuredcard img{
-    width: 100%;
-    height: 400px;
-    margin-top: 10px;
-    margin-left: 5%;
-    margin-right: 10%;
-    border-radius: 5px;
-   
+    height: 300px;
+    margin-top: 20px;
+
 }
 
+.Featuredcard img {
+    width: 100%;
+    height: 300px;
+    margin-top: 5px;
+    margin-left: 5%;
+    border-radius: 5px;
+}
 
 
 .Featuredcard div {
     display: flexbox;
     margin-left: 5%;
+
+}
+
+div .itemName {
+    white-space: nowrap;
 }
 
 .Featuredcard div button {
     width: 200px;
     height: 30px;
 }
-
