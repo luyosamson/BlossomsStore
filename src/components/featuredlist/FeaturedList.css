@@ -6,6 +6,7 @@
     grid-template-rows: repeat(2, auto);
     list-style: none;
     overflow: hidden;
-    gap: 10px;
+    gap: 5px;
     
     } 
+
