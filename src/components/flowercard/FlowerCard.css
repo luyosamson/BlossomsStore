@@ -25,4 +25,10 @@ div .itemName{
 .card div button {
     width: 200px;
     height: 30px;
+    background-color:grey;
+    border-radius: 5px;
+}
+.card button:hover {
+    background-color: green;
+    color: white;
 }
