@@ -15,6 +15,7 @@ import Sellerflowers from './sellerflowers/Sellerflowers';
 import Sellerplants from './sellerplants/Sellerplants';
 import Dash from "./dash/Dash";
 import NewPlantForm from "./newplantForm/NewPlantForm";
+import Aboutus from "./aboutus/Aboutus";
 
 
 
@@ -58,7 +59,7 @@ function App() {
     <div>
     <Navbar size={cart.length}/>
     <Routes>
-        <Route  path="/" element={<Home/>}  />
+        <Route  path="/" element={<Home handleClick={handleClick}/>}  />
         <Route  path="/flower" element={<Flower handleClick={handleClick}/>}
           />
         <Route  path="/plant" element={<Plant handleClick={handleClick}/>}  />
@@ -78,6 +79,7 @@ function App() {
         <Route exact path='/seller/dashboard/NewPlantForm' element={<NewPlantForm onAddPlant={handleAddPlant} />}/>  
         <Route exact path="/signup" element={<Signup onAddUser={handleAddUser}/>} />
          <Route path="/signup/register" element={<Register/>} />
+         <Route path="aboutus" element={<Aboutus/>} />
       </Routes>
    
        <Footer/>

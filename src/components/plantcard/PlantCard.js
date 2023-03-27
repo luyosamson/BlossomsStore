@@ -15,7 +15,7 @@ function PlantCard({newItem,handleClick}) {
       <p>Ksh.{newItem.price}</p>
      <p ><span className='status'>{JSON.stringify(newItem.inStock?"Instock":"SoldOut")}</span></p>
           
-      <button onClick={()=>handleClick(newItem)}>Add to Cart</button>
+      <button onClick={()=>handleClick(newItem)}>ADD TO CART</button>
       </div>
       </div>
   </li>

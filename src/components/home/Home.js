@@ -11,13 +11,13 @@ import FeaturedPage from '../featuredpage/FeaturedPage'
 
 
 
-function Home() {
+function Home({handleClick}) {
   return (
     <div className="home">
 
   <Hero />
   <Welcome />
-  <FeaturedPage/>
+  <FeaturedPage handleClick={handleClick}/>
   <Aboutus />
   <ReviewsPage/>
     </div>

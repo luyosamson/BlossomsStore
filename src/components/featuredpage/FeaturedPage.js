@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import FeaturedList from '../featuredlist/FeaturedList'
+import './FeaturedPage.css'
 
-function FeaturedPage() {
+function FeaturedPage({handleClick}) {
 
     const [listitem,setListItems]=useState([])
 
@@ -13,9 +14,10 @@ function FeaturedPage() {
     },[])
 
   return (
-    <div>
+    <div className='featuredPage'>
+       <h2>Featured Products</h2>
         <FeaturedList
-        
+        handleClick={handleClick}
         listitem={listitem}/>
 
 

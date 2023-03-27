@@ -9,7 +9,7 @@ function FeaturedCard({lists,handleClick}) {
        <div>
       <p className='itemName'>{lists.name}</p>
       <p>Ksh.{lists.price}</p>
-      <button onClick={()=>handleClick(lists)}>Add to Cart</button>
+      <button onClick={()=>handleClick(lists)}>ADD TO CARD</button>
       </div>
   </li>
 

@@ -29,3 +29,8 @@ div .itemName {
   width: 200px;
   height: 30px;
 }
+.card button:hover {
+  background-color: green;
+  color: white;
+}
+
