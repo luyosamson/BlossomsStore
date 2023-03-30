@@ -51,8 +51,8 @@ function FlowerPage({ handleClick }) {
           <option value='Celebration Flowers'>Celebration Flowers</option>
           <option value='Birthday Flowers'>Birthday Flowers</option>
           <option value='Sympathy Flowers'>Sympathy Flowers</option>
-          <option value='I am sorry Flowers'>I am sorry Flowers</option>
-          <option value='New baby Flowers'>New baby Flowers</option>
+          <option value='I am sorry Flowers'>I Am Sorry Flowers</option>
+          <option value='New baby Flowers'>New Baby Flowers</option>
         </select>
         <Search onSearch={searchTerm} onChangeSearch={handleChange} />
       </div>
