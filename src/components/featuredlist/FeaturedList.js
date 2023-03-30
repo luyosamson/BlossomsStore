@@ -8,7 +8,7 @@ function FeaturedList({handleClick,listitem}) {
      
         <ul className='featuredList'>
          {
-            listitem.map((lists)=>(
+            listitem?.map((lists)=>(
                 <FeaturedCard
                 key={lists.id}
                 lists={lists}
