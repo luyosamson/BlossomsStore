@@ -8,7 +8,7 @@ function NewPlantForm({ onAddPlant }) {
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("plants");
-  const [type, setType] = useState("");
+  const [product_type, setType] = useState("");
 
   function handleAddPlant(e) {
     e.preventDefault();
@@ -18,13 +18,13 @@ function NewPlantForm({ onAddPlant }) {
       image: image,
       price: price,
       description: description,
-      type: type
+      product_type: product_type
     };
 
     const endpoint =
       category === "plants"
-        ? "http://localhost:6001/plants"
-        : "http://localhost:6001/flowers";
+        ? "/plants"
+        : "/flowers";
 
     fetch(endpoint, {
       method: "POST",
@@ -63,7 +63,7 @@ function NewPlantForm({ onAddPlant }) {
               <option value="flowers">Flowers</option>
             </select>
             <label>Type</label>
-            <select value={type} onChange={(e) => setType(e.target.value)}>
+            <select value={product_type} onChange={(e) => setType(e.target.value)}>
               <option value="">Select a type</option>
               {types.map((t) => (
                 <option key={t} value={t}>

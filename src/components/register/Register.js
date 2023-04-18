@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import './Register.css';
 
 function Register() {
-  const [fullName, setFullName] = useState('');
+  const [name, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (fullName.trim() === '' || email.trim() === '' || username.trim() === '' || password.trim() === '' || confirmPassword.trim() === '') {
+    if (name.trim() === '' || email.trim() === '' || username.trim() === '' || password.trim() === '' || confirmPassword.trim() === '') {
       setErrorMessage('All fields are required');
       return;
     }
@@ -22,8 +26,8 @@ function Register() {
       return;
     }
 
-    const userData = { fullName, email, username, password };
-    fetch('http://localhost:6001/newUser', {
+    const userData = { name, email, username, password };
+    fetch('/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -39,6 +43,7 @@ function Register() {
       setPassword('');
       setConfirmPassword('');
       setErrorMessage('');
+      navigate('/')
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -51,7 +56,7 @@ function Register() {
       <form className='register' onSubmit={handleSubmit}>
         <h3>Create Account</h3>
         <label className='fullName'>Enter Full Name</label>
-        <input type='text' placeholder='Enter Fullname' value={fullName} onChange={(event) => setFullName(event.target.value)} />
+        <input type='text' placeholder='Enter Fullname' value={name} onChange={(event) => setFullName(event.target.value)} />
         <label>Email</label>
         <input type='email' placeholder='Enter Email' value={email} onChange={(event) => setEmail(event.target.value)} />
         <label>Username</label>

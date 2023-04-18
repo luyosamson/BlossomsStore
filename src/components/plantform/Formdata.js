@@ -12,7 +12,7 @@ function Formdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
 
 
   function handleDelete(){
-    fetch(`http://localhost:6001/plants/${newItem.id}`,{
+    fetch(`/plants/${newItem.id}`,{
         method:'DELETE'
     })
 
@@ -25,7 +25,7 @@ function Formdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
 
   function handleUpdatePrice(){
 
-    fetch(`http://localhost:6001/plants/${newItem.id}`,{
+    fetch(`/plants/${newItem.id}`,{
       method:'PATCH',
       headers:{
         "Content-Type":"application/json"
@@ -42,7 +42,7 @@ function Formdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
     e.preventDefault()
       setinStock(!inStock);
    
-    fetch(`http://localhost:6001/plants/${newItem.id}`,{
+    fetch(`/plants/${newItem.id}`,{
       method:"PATCH",
       headers:{
               "Content-Type":"application/json",
@@ -63,7 +63,7 @@ function Formdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
         <tr>
             <td>{newItem.id}</td>
             <td>{newItem.name}</td>
-            <td>{newItem.type}</td>
+            <td>{newItem.product_type}</td>
             <td>{newItem.price}</td>
 
             <td>

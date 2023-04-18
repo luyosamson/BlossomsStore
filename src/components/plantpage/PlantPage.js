@@ -15,7 +15,7 @@ function PlantPage({handleClick}) {
   
 
 useEffect(()=>{
-  fetch("http://localhost:6001/plants")
+  fetch("/plants")
   .then((r)=>r.json())
   .then((items)=>setItems(items))
 },[])

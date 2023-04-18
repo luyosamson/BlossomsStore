@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import { Routes, Route} from "react-router-dom";
 import Home from "./home/Home";
 import Flower from "./flower/Flower";
@@ -25,6 +25,15 @@ function App() {
     const [cart, setCart] = useState([]);
     const [items,setItems]=useState([])
     const [user,setUser]=useState([])
+    //  const [user, setUser] = useState(null);
+
+      useEffect(() => {
+    fetch("/me").then((response) => {
+      if (response.ok) {
+        response.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
 
 
   function handleAddPlant(newPlant) {
@@ -78,8 +87,8 @@ function App() {
         <Route exact path='/seller/dashboard/Sellerflowers' element={<Sellerflowers />} />
         <Route exact path='/seller/dashboard/NewPlantForm' element={<NewPlantForm onAddPlant={handleAddPlant} />}/>  
         <Route exact path="/signup" element={<Signup onAddUser={handleAddUser}/>} />
-         <Route path="/signup/register" element={<Register/>} />
-         <Route path="aboutus" element={<Aboutus/>} />
+        <Route path="/signup/register" element={<Register/>} />
+        <Route path="aboutus" element={<Aboutus/>} />
       </Routes>
    
        <Footer/>

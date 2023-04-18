@@ -7,7 +7,7 @@ function Sellerplants() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:6001/plants')
+    fetch('/plants')
       .then((r) => r.json())
       .then((items) => setItems(items));
   }, []);

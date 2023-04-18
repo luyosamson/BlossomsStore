@@ -8,7 +8,7 @@ function FeaturedPage({handleClick}) {
 
 
     useEffect(()=>{
-        fetch("http://localhost:6001/featured")
+        fetch('/')
         .then((r)=>r.json())
         .then((item)=>setListItems(item))
     },[])
@@ -17,7 +17,7 @@ function FeaturedPage({handleClick}) {
     <div className='featuredPage'>
        <h2>Featured Products</h2>
         <FeaturedList
-        handleClick={handleClick}
+        handleClick={handleClick} 
         listitem={listitem}/>
 
 

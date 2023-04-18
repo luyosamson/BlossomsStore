@@ -12,7 +12,7 @@ function FlowerPage({ handleClick }) {
   const [selectedOption, setSelectedOption] = useState('All');
 
   useEffect(() => {
-    fetch('http://localhost:6001/flowers')
+    fetch('/flowers')
       .then((r) => r.json())
       .then((items) => setList(items));
   }, []);

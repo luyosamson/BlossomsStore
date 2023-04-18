@@ -11,20 +11,29 @@ function Flowerdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
   const [inStock, setinStock] = useState(false);
 
 
-  function handleDelete(){
-    fetch(`http://localhost:6001/flowers/${newItem.id}`,{
-        method:'DELETE'
+function handleDelete() {
+  fetch(`/flowers/${newItem.id}`, {
+    method: 'DELETE'
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
     })
+    .then(() => {
+      // Call the onDeleteItem prop to remove the deleted item from the list
+      onDeleteItem(newItem.id);
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+}
 
-    .then((r)=>r.json())
-    .then(()=>onDeleteItem(newItem))
-
-
-  }
 
   function handleUpdatePrice(){
 
-    fetch(`http://localhost:6001/flowers/${newItem.id}`,{
+    fetch(`/flowers/${newItem.id}`,{
       method:'PATCH',
       headers:{
         "Content-Type":"application/json"
@@ -41,7 +50,7 @@ function Flowerdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
     e.preventDefault()
       setinStock(!inStock);
    
-    fetch(`http://localhost:6001/flowers/${newItem.id}`,{
+    fetch(`/flowers/${newItem.id}`,{
       method:"PATCH",
       headers:{
               "Content-Type":"application/json",
@@ -62,7 +71,7 @@ function Flowerdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
         <tr>
             <td>{newItem.id}</td>
             <td>{newItem.name}</td>
-            <td>{newItem.type}</td>
+            <td>{newItem.product_type}</td>
             <td>{newItem.price}</td>
 
             <td>
