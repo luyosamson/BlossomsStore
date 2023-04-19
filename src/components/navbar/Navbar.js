@@ -16,7 +16,8 @@ const linkstyle={
   
 }
 
-function Navbar({size}) { 
+function Navbar({size,user}) { 
+  console.log("Navbar rendered with user:", user);
   return (
     <div className="navbar">
         <NavLink 
@@ -53,12 +54,17 @@ function Navbar({size}) {
           <CgShoppingCart size='2rem'/><span>{size}</span>
         </NavLink>
 
-        <NavLink
+        {/* <NavLink
         to='/signup'
          style={linkstyle}
          >
         <FaUserAlt size='1.5rem'/>
-        </NavLink>
+        </NavLink> */}
+
+         <NavLink to="/signup" style={linkstyle}>
+        {user && <span>Hi, {user.username}</span>}
+        {!user && <FaUserAlt size="1.5rem" />}
+      </NavLink>
 
     
     </div>

@@ -42,10 +42,15 @@ function App() {
     setItems(updatedPlantsArray);
   }
 
-    function handleAddUser(newUser) {
-    const updatedUserArray = [...user, newUser];
-    setUser(updatedUserArray);
-  }
+  //   function handleAddUser(newUser) {
+  //   const updatedUserArray = [...user, newUser];
+  //   setUser(updatedUserArray);
+  // }
+
+  function handleAddUser(newUser) {
+  setUser(prevUsers => [...prevUsers, newUser]);
+}
+
 
   const handleClick = (item) => {
     if (cart.indexOf(item) !== -1) return;
@@ -67,7 +72,8 @@ function App() {
 
   return (
     <div>
-    <Navbar size={cart.length}/>
+    <Navbar size={cart.length} user={user}  key={user ? user.id : "no-user"}/>
+      
     <Routes>
         <Route  path="/" element={<Home handleClick={handleClick}/>}  />
         <Route  path="/flower" element={<Flower handleClick={handleClick}/>}
