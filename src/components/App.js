@@ -16,6 +16,7 @@ import Sellerplants from './sellerplants/Sellerplants';
 import Dash from "./dash/Dash";
 import NewPlantForm from "./newplantForm/NewPlantForm";
 import Aboutus from "./aboutus/Aboutus";
+import Selleraccount from "./selleraccount/Selleraccount";
 
 
 
@@ -88,7 +89,8 @@ function App() {
         <Route exact path='/seller/dashboard/NewPlantForm' element={<NewPlantForm onAddPlant={handleAddPlant} />}/>  
         <Route exact path="/signup" element={<Signup onAddUser={handleAddUser}/>} />
         <Route path="/signup/register" element={<Register/>} />
-        <Route path="aboutus" element={<Aboutus/>} />
+        <Route path="/aboutus" element={<Aboutus/>} />
+        <Route path="/signup/selleraccount" element={<Selleraccount/>}/>
       </Routes>
    
        <Footer/>

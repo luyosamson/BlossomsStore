@@ -1,13 +1,19 @@
 
-.register {
+.register-container{
+    height: 650px;
+}
 
-    display: block;
+
+.register {
     margin: 0 auto;
-    width: 20%;
-    height: 500px;
+    width: 50%;
+    height: 600px;
     background-color: bisque;
     border-radius: 10px;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 form input {
@@ -38,16 +44,22 @@ h4 {
 h3 {
     text-align: center;
 }
-.reButton{
-    background-color:yellowgreen;
-    margin-top: 50px;
-    margin-left: 110px;
+.reButton {
+    background-color: yellowgreen;
+    margin-top: 100px;
     border-radius: 10px;
     width: 130px;
     height: 30px;
-    
-   
+    margin: 0 auto;
+    display: block;
 }
+
+.register input[type="password"]:last-of-type {
+    margin-bottom: 20px;
+    /* add margin to the last password input field */
+}
+
+
 .reButton:hover{
 background-color: green;
 }

@@ -1,8 +1,9 @@
-
+.login{
+    height:550px;
+}
 
 
 .loginForm{
-
     display: block;
     margin: 0 auto;
     width: 20%; 

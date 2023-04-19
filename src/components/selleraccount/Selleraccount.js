@@ -1,10 +1,12 @@
+
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import './Register.css';
+import '../register/Register.css';
 
-function Register() {
+function Selleraccount() {
   const [name, setFullName] = useState('');
   const [email, setEmail] = useState('');
+  const [storeName, setStoreName] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -26,7 +28,7 @@ function Register() {
       return;
     }
 
-    const userData = { name, email, username, password };
+    const userData = { name, email,storeName,username, password };
     fetch('/signup', {
       method: 'POST',
       headers: {
@@ -39,6 +41,7 @@ function Register() {
       console.log('Success:', data);
       setFullName('');
       setEmail('');
+      setStoreName('');
       setUsername('');
       setPassword('');
       setConfirmPassword('');
@@ -54,13 +57,15 @@ function Register() {
   return (
     <div className='register-container'>
       <form className='register' onSubmit={handleSubmit}>
-        <h3>Create Account</h3>
+        <h3>Create Account As A Seller</h3>
         <label className='fullName'>Enter Full Name</label>
         <input type='text' placeholder='Enter Fullname' value={name} onChange={(event) => setFullName(event.target.value)} />
         <label>Email</label>
         <input type='email' placeholder='Enter Email' value={email} onChange={(event) => setEmail(event.target.value)} />
         <label>Username</label>
         <input type='text' placeholder='Enter Username' value={username} onChange={(event) => setUsername(event.target.value)} />
+        <label>Store Name</label>
+        <input type='text' placeholder='Enter Store Name' value={storeName} onChange={(event) => setStoreName(event.target.value)} />
         <label>Password</label>
         <input type='password' placeholder='Enter password' value={password} onChange={(event) => setPassword(event.target.value)} />
         <label>Confirm password</label>
@@ -72,4 +77,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default Selleraccount;
