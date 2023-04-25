@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Signup.css";
 
 function Signup({ onAddUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const [isSeller, setIsSeller] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-
   const navigate = useNavigate();
 
   const handleFormSubmit = (event) => {
@@ -17,8 +16,14 @@ function Signup({ onAddUser }) {
       setErrorMessage("Username or Password is blank");
       return;
     }
+
+    let endpoint = "/login";
+    if (isSeller) {
+      endpoint = "/loginseller";
+    }
+
     const payload = { username, password };
-    fetch("/login", {
+    fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -28,15 +33,18 @@ function Signup({ onAddUser }) {
         if (data.error) {
           setErrorMessage(data.error);
         } else {
-          // onAddUser(data);
+          console.log('Success:', data);
           setUsername("");
           setPassword("");
+          setIsSeller(false);
           setErrorMessage("");
-        
-          navigate('/')
+          navigate("/");
         }
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.error("Error:", error);
+        setErrorMessage("Something went wrong. Please try again later.");
+      });
   };
 
   const handleInputChange = (event) => {
@@ -48,11 +56,13 @@ function Signup({ onAddUser }) {
     }
   };
 
+  const handleCheckboxChange = () => {
+    setIsSeller(!isSeller);
+  };
+
   return (
     <div className="login">
-     
       <form className="loginForm" onSubmit={handleFormSubmit}>
-      
         <h2>Login</h2>
 
         <label htmlFor="username" className="username">
@@ -75,22 +85,40 @@ function Signup({ onAddUser }) {
           onChange={handleInputChange}
         />
 
+        <div className="checkbox-container">
+          <label className="checkbox-label" htmlFor="seller">
+            Login as a seller:
+          </label>
+          <input
+            className="checkbox-input"
+            type="checkbox"
+            name="seller"
+            id="seller"
+            checked={isSeller}
+            onChange={handleCheckboxChange}
+          />
+        </div>
+
         <button type="submit">Login</button>
 
-        {errorMessage && <p className="errorMessage">{errorMessage}</p>}
+        
 
         <h4>
           <Link>Forgot Password?</Link>
         </h4>
 
         <h4>
-          Create Account?<Link exact to="/signup/register">
-            As A Buyer
-          </Link>
+          Create Account?
+          <p>
+            <Link exact to="/signup/register">
+              As A Buyer
+            </Link>
+          </p>
           <Link exact to="/signup/selleraccount">
             As A Seller
           </Link>
         </h4>
+        {errorMessage && <p className="errorMessage">{errorMessage}</p>}
       </form>
     </div>
   );

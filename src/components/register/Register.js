@@ -26,6 +26,15 @@ function Register() {
       return;
     }
 
+     // Password validation
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!passwordRegex.test(password)) {
+      setErrorMessage(
+        'Password must include at least one lowercase letter, \n one uppercase letter, one digit, one special character, and have a minimum of 8 characters'
+      );
+      return;
+    }
+
     const userData = { name, email, username, password };
     fetch('/signup', {
       method: 'POST',
@@ -36,6 +45,10 @@ function Register() {
     })
     .then(response => response.json())
     .then(data => {
+      if(data.error){
+        setErrorMessage(data.error)
+      }
+      else{
       console.log('Success:', data);
       setFullName('');
       setEmail('');
@@ -44,7 +57,7 @@ function Register() {
       setConfirmPassword('');
       setErrorMessage('');
       navigate('/')
-    })
+  }})
     .catch((error) => {
       console.error('Error:', error);
       setErrorMessage('Something went wrong. Please try again later.');

@@ -25,8 +25,8 @@ function App() {
 
     const [cart, setCart] = useState([]);
     const [items,setItems]=useState([])
-    const [user,setUser]=useState([])
-    //  const [user, setUser] = useState(null);
+    const [user,setUser]=useState({})
+  
 
       useEffect(() => {
     fetch("/me").then((response) => {
@@ -36,20 +36,41 @@ function App() {
     });
   }, []);
 
+  //Logging out the user
+
+  function handleLogout() {
+  fetch('/logout', {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include'
+  })
+  .then(response => {
+    if (response.ok) {
+      // The user has been logged out successfully
+      window.location.reload();
+    } else {
+      // Failed to log out the user
+      console.error('Failed to log out the user');
+    }
+  })
+  .catch(error => {
+    console.error('Error logging out:', error);
+  });
+}
 
   function handleAddPlant(newPlant) {
     const updatedPlantsArray = [...items, newPlant];
     setItems(updatedPlantsArray);
   }
 
-  //   function handleAddUser(newUser) {
-  //   const updatedUserArray = [...user, newUser];
-  //   setUser(updatedUserArray);
-  // }
+    function handleAddUser(newUser) {
+    const updatedUserArray = [...user, newUser];
+    setUser(updatedUserArray);
+  }
 
-  function handleAddUser(newUser) {
-  setUser(prevUsers => [...prevUsers, newUser]);
-}
+
 
 
   const handleClick = (item) => {
@@ -72,7 +93,8 @@ function App() {
 
   return (
     <div>
-    <Navbar size={cart.length} user={user}  key={user ? user.id : "no-user"}/>
+    <Navbar size={cart.length} user={user} 
+    onLogout={handleLogout}/>
       
     <Routes>
         <Route  path="/" element={<Home handleClick={handleClick}/>}  />
@@ -80,7 +102,6 @@ function App() {
           />
         <Route  path="/plant" element={<Plant handleClick={handleClick}/>}  />
         <Route  path="/seller" element={<Seller/>}  />
-        {/* <Route  path="/signup" element={<Signup/>}  /> */}
         <Route  path="/search" element={<Search/>}  />
         <Route  path="/cart" element={<Cart cart={cart} 
         setCart={setCart}

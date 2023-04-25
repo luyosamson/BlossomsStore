@@ -17,7 +17,7 @@ function Home({handleClick}) {
 
   <Hero />
   <Welcome />
-  <FeaturedPage handleClick={handleClick}/>
+  <FeaturedPage/>
   <Aboutus />
   <ReviewsPage/>
     </div>

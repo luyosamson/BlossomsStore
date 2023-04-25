@@ -1,5 +1,5 @@
 .login{
-    height:550px;
+    height:600px;
 }
 
 
@@ -7,7 +7,7 @@
     display: block;
     margin: 0 auto;
     width: 20%; 
-    height:500px;
+    height:550px;
     background-color:bisque;
     border-radius: 10px;
     margin-top: 50px;
@@ -48,4 +48,21 @@ h2{
 }
 .loginForm button:hover{
     background-color: green;
+}
+
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-label {
+    margin-right: 10px;
+}
+
+.checkbox-input {
+    width: 16px;
+    height: 16px;
 }

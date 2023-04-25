@@ -6,7 +6,7 @@ import '../register/Register.css';
 function Selleraccount() {
   const [name, setFullName] = useState('');
   const [email, setEmail] = useState('');
-  const [storeName, setStoreName] = useState('');
+  const [store_name, setStoreName] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -16,28 +16,44 @@ function Selleraccount() {
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    if (name.trim() === '' || email.trim() === '' || username.trim() === '' || password.trim() === '' || confirmPassword.trim() === '') {
-      setErrorMessage('All fields are required');
+  if (name.trim() === '' || email.trim() === '' || username.trim() === '' || password.trim() === '' || confirmPassword.trim() === '') {
+    setErrorMessage('All fields are required');
+    return;
+  }
+
+    // Password validation
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!passwordRegex.test(password)) {
+      setErrorMessage(
+        'Password must include at least one lowercase letter, \n one uppercase letter, one digit, one special character, and have a minimum of 8 characters'
+      );
       return;
     }
 
-    if (password !== confirmPassword) {
-      setErrorMessage('Passwords do not match');
-      return;
-    }
+  if (password !== confirmPassword) {
+    setErrorMessage('Passwords do not match');
+    return;
+  }
 
-    const userData = { name, email,storeName,username, password };
-    fetch('/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(userData)
-    })
-    .then(response => response.json())
+  const userData = { name, email, store_name, username, password };
+  fetch('/signupseller', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(userData)
+  })
+  .then(response => response.json())
     .then(data => {
+      if (data.error) {
+        if (data.error.includes('store_name')) {
+          setErrorMessage('Store name already exists');
+        } else {
+          setErrorMessage(data.error);
+        }
+      } else {
       console.log('Success:', data);
       setFullName('');
       setEmail('');
@@ -46,13 +62,15 @@ function Selleraccount() {
       setPassword('');
       setConfirmPassword('');
       setErrorMessage('');
-      navigate('/')
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      setErrorMessage('Something went wrong. Please try again later.');
-    });
-  };
+      navigate('/');
+    }
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    setErrorMessage('Something went wrong. Please try again later.');
+  });
+  
+};
 
   return (
     <div className='register-container'>
@@ -65,12 +83,16 @@ function Selleraccount() {
         <label>Username</label>
         <input type='text' placeholder='Enter Username' value={username} onChange={(event) => setUsername(event.target.value)} />
         <label>Store Name</label>
-        <input type='text' placeholder='Enter Store Name' value={storeName} onChange={(event) => setStoreName(event.target.value)} />
+        <input type='text' placeholder='Enter Store Name' value={store_name} onChange={(event) => setStoreName(event.target.value)} />
         <label>Password</label>
         <input type='password' placeholder='Enter password' value={password} onChange={(event) => setPassword(event.target.value)} />
         <label>Confirm password</label>
         <input type='password' placeholder='Confirm password' value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} />
         {errorMessage && <div className='error'>{errorMessage}</div>}
+        {errorMessage && errorMessage.includes('store_name') && <div className='error'>Store name already exists</div>}
+
+       
+
         <button className='reButton'>REGISTER</button>
       </form>
     </div>

@@ -1,4 +1,4 @@
-
+/* 
 .Featuredcard {
     width: 100%;
     height: 300px;
@@ -41,21 +41,21 @@ div .itemName {
 .Featuredcard {
     position: relative;
     /* set position to relative so the button can be positioned absolutely */
-}
+/* }
 
 .Featuredcard:hover button {
-    display: block;
+    display: block; */
     /* show the button when the user hovers over the image */
-}
+/* } */
 
-.Featuredcard button {
-    display: none;
+/* .Featuredcard button {
+    display: none; */
     /* hide the button by default */
-    position: absolute;
-    top: 50%;
+    /* position: absolute;
+    top: 50%; */
     /* position the button in the middle of the image vertically */
-    left: 50%;
+    /* left: 50%; */
     /* position the button in the middle of the image horizontally */
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     /* center the button on the image */
-}
+/* } */ 

@@ -16,59 +16,50 @@ const linkstyle={
   
 }
 
-function Navbar({size,user}) { 
+
+function Navbar({ size, user, onLogout }) {
   console.log("Navbar rendered with user:", user);
+
+
   return (
     <div className="navbar">
-        <NavLink 
-        to='/'
-        style={linkstyle}
-        >
+      <NavLink to="/" style={linkstyle}>
         Home
-        </NavLink>
-
-        <NavLink 
-        to='/flower'
-        style={linkstyle}
-        >Flower
-        </NavLink>
-
-        <NavLink
-        to="/plant"
-         style={linkstyle}
-        >
-          Plant
-        </NavLink>
-
-        <NavLink
-         exact to="/seller/dashboard"
-         style={linkstyle}>
-          Seller
-        </NavLink>
-
-          <NavLink 
-        to='/cart'
-         style={linkstyle}
-         
-         >
-          <CgShoppingCart size='2rem'/><span>{size}</span>
-        </NavLink>
-
-        {/* <NavLink
-        to='/signup'
-         style={linkstyle}
-         >
-        <FaUserAlt size='1.5rem'/>
-        </NavLink> */}
-
-         <NavLink to="/signup" style={linkstyle}>
-        {user && <span>Hi, {user.username}</span>}
-        {!user && <FaUserAlt size="1.5rem" />}
       </NavLink>
 
-    
+      <NavLink to="/flower" style={linkstyle}>
+        Flower
+      </NavLink>
+
+      <NavLink to="/plant" style={linkstyle}>
+        Plant
+      </NavLink>
+
+      <NavLink exact to="/seller/dashboard" style={linkstyle}>
+        Seller
+      </NavLink>
+
+      <NavLink to="/cart" style={linkstyle}>
+        <CgShoppingCart size="2rem" />
+        <span>{size}</span>
+      </NavLink>
+
+      {user ? (
+        <>
+          <NavLink to="/" style={linkstyle} onClick={onLogout}>
+            Logout
+          </NavLink>
+          <NavLink to="/signup" style={linkstyle}>
+            Hi, {user.username}
+          </NavLink>
+        </>
+      ) : (
+        <NavLink to="/signup" style={linkstyle}>
+          <FaUserAlt size="1.5rem" />
+        </NavLink>
+      )}
     </div>
   );
 }
+export default Navbar
 
-export default Navbar;
