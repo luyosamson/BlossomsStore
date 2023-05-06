@@ -17,9 +17,9 @@ function Signup({ onAddUser }) {
       return;
     }
 
-    let endpoint = "/login";
+    let endpoint = "https://evergreen-1t2o.onrender.com/login";
     if (isSeller) {
-      endpoint = "/loginseller";
+      endpoint = "https://evergreen-1t2o.onrender.com/loginseller";
     }
 
     const payload = { username, password };

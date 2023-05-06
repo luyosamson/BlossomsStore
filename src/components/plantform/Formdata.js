@@ -12,7 +12,7 @@ function Formdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
 
 
   function handleDelete(){
-    fetch(`/plants/${newItem.id}`,{
+    fetch(`https://evergreen-1t2o.onrender.com/plants/${newItem.id}`,{
         method:'DELETE'
     })
 
@@ -25,7 +25,7 @@ function Formdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
 
   function handleUpdatePrice(){
 
-    fetch(`/plants/${newItem.id}`,{
+    fetch(`https://evergreen-1t2o.onrender.com/plants/${newItem.id}`,{
       method:'PATCH',
       headers:{
         "Content-Type":"application/json"
@@ -42,7 +42,7 @@ function Formdata({newItem,onDeleteItem,onUpdatedPrice,updatestatus}) {
     e.preventDefault()
       setinStock(!inStock);
    
-    fetch(`/plants/${newItem.id}`,{
+    fetch(`https://evergreen-1t2o.onrender.com/plants/${newItem.id}`,{
       method:"PATCH",
       headers:{
               "Content-Type":"application/json",

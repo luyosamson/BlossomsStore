@@ -23,8 +23,8 @@ function NewPlantForm({ onAddPlant }) {
 
     const endpoint =
       category === "plants"
-        ? "/plants"
-        : "/flowers";
+        ? "https://evergreen-1t2o.onrender.com/plants"
+        : "https://evergreen-1t2o.onrender.com/flowers";
 
     fetch(endpoint, {
       method: "POST",

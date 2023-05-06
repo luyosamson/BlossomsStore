@@ -38,7 +38,7 @@ function Selleraccount() {
   }
 
   const userData = { name, email, store_name, username, password };
-  fetch('/signupseller', {
+  fetch('https://evergreen-1t2o.onrender.com/signupseller', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

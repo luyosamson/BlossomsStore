@@ -29,7 +29,7 @@ function App() {
   
 
       useEffect(() => {
-    fetch("/me").then((response) => {
+    fetch("https://evergreen-1t2o.onrender.com/me").then((response) => {
       if (response.ok) {
         response.json().then((user) => setUser(user));
       }
@@ -39,7 +39,7 @@ function App() {
   //Logging out the user
 
   function handleLogout() {
-  fetch('/logout', {
+  fetch('https://evergreen-1t2o.onrender.com/logout', {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json'

@@ -13,7 +13,7 @@ function Sellerflowers() {
 
 
   useEffect(()=>{
-    fetch("/flowers")
+    fetch("https://evergreen-1t2o.onrender.com/flowers")
     .then((r)=>r.json())
     .then((items)=>setItems(items));
 
