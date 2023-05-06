@@ -15,7 +15,7 @@ function PlantPage({handleClick}) {
   
 
 useEffect(()=>{
-  fetch("https://evergreen-1t2o.onrender.com/plants")
+  fetch("/plants")
   .then((r)=>r.json())
   .then((items)=>setItems(items))
 },[])
