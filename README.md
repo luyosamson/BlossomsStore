@@ -1,4 +1,4 @@
-# React Mock Code Challenge: Plantsy
+# BLOSSOMS
 
 ## Demo
 
