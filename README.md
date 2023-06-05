@@ -3,6 +3,7 @@
 
 
 #### GET /plants
+An e-commerce for selling indoor plants and decorative flowers
 
 Example Response:
 
@@ -54,25 +55,6 @@ Example Response:
 }
 ```
 
-## Advanced Deliverables
-
-These deliverables are not required to pass the code challenge, but if you have
-the extra time, or even after the code challenge, they are a great way to
-stretch your skills.
-
-You'll have to add additional elements for these features. Feel free to style
-them however you see fit!
-
-> Note: If you are going to attempt these advanced deliverables, please be sure
-> to have a working commit with all the Core Deliverables first!
-
-As a user:
-
-1. I can update the price of a plant and still see the updated price after
-   refreshing the page.
-2. I can delete a plant and it is still gone when I refresh the page.
-
-### Endpoints for Advanced Deliverables
 
 #### PATCH /plants/:id
 
