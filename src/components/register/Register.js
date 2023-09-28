@@ -36,7 +36,7 @@ function Register() {
     }
 
     const userData = { name, email, username, password };
-    fetch('https://evergreen-1t2o.onrender.com/signup', {
+    fetch('https://evergreen-6d2k.onrender.com/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -7,7 +7,7 @@ function Sellerplants() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('https://evergreen-1t2o.onrender.com/plants')
+    fetch('https://evergreen-6d2k.onrender.com/plants')
       .then((r) => r.json())
       .then((items) => setItems(items));
   }, []);

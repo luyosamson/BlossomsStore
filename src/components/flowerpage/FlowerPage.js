@@ -12,7 +12,7 @@ function FlowerPage({ handleClick }) {
   const [selectedOption, setSelectedOption] = useState('All');
 
   useEffect(() => {
-    fetch('https://evergreen-1t2o.onrender.com/flowers')
+    fetch('https://evergreen-6d2k.onrender.com/flowers')
       .then((r) => r.json())
       .then((items) => setList(items));
   }, []);
